@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CopyPast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body>
+        <table style="width:auto" id="myTableApp">
+            <tr>
+                <th colspan="3" class="colAppWeb">App</th>
+                <tr>
+                    <th>HOSTs</th>
+                    <!--
+                    <input type="checkbox" id="myCheckGet"  onclick="myFunction()">
+                    <input type="checkbox" id="myCheckPost"  onclick="myFunction()">
+                    -->
+                    <th>GET</th>
+                    <th>POST</th>
+                </tr>
+            </tr>
+            <tr>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" name="mskIotApp01" OnClick="ClickFunction(this), App01();"></th>
+                <td><input type="button" value="Activity_sync" class="btn" name="ActivitySyncGet" OnClick="ClickFunction(this), ActivitySync01();"></td>
+                <td id="ActivitySyncPost">Activity_sync</td>
+            <tr>
+                <td>Ams_sync</td>
+                <td>Ams_sync</td>
+            </tr>
+            </tr>
+            <tr>
+            <th rowspan="2" id="mskIotApp02">msk-iot-app02</th>
+                <td id="BackendGet">Backend</td>
+                <td id="BackendPost">Backend</td>
+            </tr>
+            <tr>
+                <td id="LimitMartGet">Limit_mart</td>
+                <td id="LimitMartPost">Limit_mart</td>
+            </tr>
+            <tr>
+            <th rowspan="2" id="mskIotApp51">msk-iot-app51</th>
+                <td id="MartSyncGet">Mart_sync</td>
+                <td id="MartSyncPost">Mart_sync</td>
+            </tr>
+            <tr>
+                <td id="NetworkEventsGet">Network_events</td>
+                <td id="NetworkEventsPost">Network_events</td>
+            </tr>
+            <tr>
+            <th rowspan="2" id="mskIotApp52">msk-iot-app52</th>
+                <td id="NotificationGet">Notification</td>
+                <td id="NotificationPost">Notification</td>
+            </tr>
+            <tr>
+                <td id="OrdersExecutorGet">Orders_executor</td>
+                <td id="OrdersExecutorPost">Orders_executor</td>
+            </tr>
+            <tr>
+                <th colspan="3" class="colAppWeb">Web</th>
+            </tr>
+            <tr>
+            <th rowspan="2" id="mskIotWeb01">msk-iot-web01</th>
+                <td id="BirtGet">Birt</td>
+                <td id="BirtPost">Birt</td>
+            <tr>
+                <td id="ElasticsearchGet">Elacticsearch</td>
+                <td id="ElasticsearchPost">Elacticsearch</td>
+            </tr>
+            </tr>
+            <tr>
+            <th rowspan="2" id="mskIotWeb02">msk-iot-web02</th>
+                <td id="GeolocationGet">Geolocation</td>
+                <td id="GeolocationPost">Geolocation</td>
+            </tr>
+            <tr>
+                <td id="GuiAuthGet">Gui_auth</td>
+                <td id="GuiAuthPost">Gui_auth</td>
+            </tr>
+            <tr>
+            <th rowspan="2" id="mskIotWeb51">msk-iot-web51</th>
+                <td id="GuiBackendGet">Gui_backend</td>
+                <td id="GuiBackendPost">Gui_backend</td>
+            </tr>
+            <tr>
+                <td id="PushGet">Push</td>
+                <td id="PushPost">Push</td>
+            </tr>
+            <tr>
+            <th rowspan="2" id="mskIotWeb52">msk-iot-web52</th>
+                <td id="ReportsGet">Reports</td>
+                <td id="ReportsPost">Reports</td>
+            </tr>
+            <tr>
+                <td id="XvlrPushGet">Xvlr_push</td>
+                <td id="XvlrPushPost">Xvlr_push</td>
+            </tr>
+        </table>
+    <textarea type="text" value="" id="text" style="width: 320px; height: 300px; background-color: rgba(36, 43, 43); color:chartreuse"></textarea>
+<div class="out">
+</div>
+<!--<script>
+    function myFunction() {
+    var checkBox = document.getElementById("myCheckGet, myCheckPost");
+    //var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>-->
+<script>
+    // Добавить его к каждому элементу таблицы (td)
+    var myTableApp = document.getElementsByTagName("TD");
+    var i;
+    for (i = 0; i < myTableApp.length; i++) {
+      var span = document.createElement("SPAN");
+      myTableApp[i].appendChild(span);
+    }
+    
+    // Добавить символ "отмечен" при нажатии на элемент таблицы
+    var list = document.querySelector('table');
+    list.addEventListener('click', function(ev) {
+      if (ev.target.tagName === 'TD') {
+        ev.target.classList.toggle('checkedApp');
+      }
+      else if (ev.target.tagName === 'TH') {
+        ev.target.classList.toggle('checkedHost');
+      }
+    }, false);
+
+    // Добавляем визуализацию нажатой кнопки
+    function ClickFunction(btn) {
+    btn.classList.add("active");
+    }
+
+    // Добавляем логику по выбору хостов и компонент
+    var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet')
+    if (ev.target.getElementById === 'mskIotApp01') {
+        console.log('true')
+    } else if (ev.target.getElementById === 'ActivitySyncGet') {
+        text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
+    }
+</script>
+
+<!--<button id="onclick_v_addEventListener">Это третий способ реализации Onclick в JavaScript</button>
+
+<script>
+
+document.querySelector("#onclick_v_addEventListener") .addEventListener("click", myFoo);
+
+function myFoo()
+
+{
+
+alert("Это третий способ реализации Onclick в JavaScript через addEventListener и вывод через alert");
+
+}
+
+</script>
+    
+--====    
+    
+<button id="onclick_v_javascript">Это второй способ реализации Onclick в JavaScript</button>
+
+<script>document.querySelector("#onclick_v_javascript").onclick = function(){alert("Это второй способ реализации Onclick в JavaScript и вывод через alert");}; </script>
+    
+    
+    
+    var input = JSON.parse (document.getElementById ("input_id"). Value);
+<script>
+    document.getElementById("Activity_sync").addEventListener('click', function () {
+        var text = document.getElementById('text');
+        if (ev.target.toggle('checkedApp')) {
+        text.value += ' Activity_sync';
+        }
+        else {text.style.display = "none"}
+    });
+</script>
+
+<input type="text" value="" id="myInput">
+<input type="button" value="add" onclick = "document.getElementById('out').value += document.getElementById('myInput').value + '\n'">
+<textarea id="out"></textarea>
+
+The button used to copy the text
+<button onclick="myFunction()">Copy text</button>-->
+
+</body>
+</html>
