@@ -56,9 +56,11 @@ th {
 }
 
 .btn {
-    background-color: rgb(96, 244, 116);
+    background-color: rgb(36, 43, 43);
+    color: rgb(94, 248, 4);
 }
 
 .active {
-    background-color: sandybrown;
+    background-color: rgb(94, 248, 4);
+    color: rgb(36, 43, 43);
 }
