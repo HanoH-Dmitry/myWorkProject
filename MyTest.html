@@ -22,8 +22,8 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" name="mskIotApp01" OnClick="ClickFunction(this), App01();"></th>
-                <td><input type="button" value="Activity_sync" class="btn" name="ActivitySyncGet" OnClick="ClickFunction(this), ActivitySync01();"></td>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="mskIotApp01" OnClick="ClickFunction(this), App01();"></th>
+                <td><input type="button" value="Activity_sync" class="btn" id="ActivitySyncGet" OnClick="ClickFunction(this), ActivitySync01();"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
                 <td>Ams_sync</td>
@@ -130,12 +130,18 @@
     //    ev.target.classList.toggle('checkedHost');
     //  }
     //}, false);
-
-    // Добавляем визуализацию нажатой кнопки
-    function ClickFunction(btn) {
-    btn.classList.add("active");
+    
+    mskIotApp01.addEventListener("click", myFoo)
+    function myFoo ()
+    {
+        alert("This click to button Host!")
     }
-
+    //ActivitySyncGet
+    // Добавляем визуализацию нажатой кнопки
+    //function ClickFunction(btn) {
+    //btn.classList.add("active");
+    //}
+    
     // Добавляем логику по выбору хостов и компонент
     var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
     //var i;
