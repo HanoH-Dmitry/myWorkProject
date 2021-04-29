@@ -149,13 +149,14 @@
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
     
-    const btnAll = document.querySelector('#mskIotApp01 #ActivitySyncGet')
+    const mskIotApp01 = document.querySelector('#mskIotApp01')
+    const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
     //let btnAll = document.querySelectorAll('#mskIotApp01 #ActivitySyncGet');
     function changeBackground(){
 	    document.body.style.background = 'rgb(248, 4, 167)';
     }
-    btnAll.addEventListener('click', _ => btnAll.classList.toggle('is-active'));
-
+    mskIotApp01.addEventListener('click', _ => mskIotApp01.classList.toggle('is-active'));
+    ActivitySyncGet.addEventListener('click', _ => ActivitySyncGet.classList.toggle('is-active'));
 
     // Добавляем логику по выбору хостов и компонент
     var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
