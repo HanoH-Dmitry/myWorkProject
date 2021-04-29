@@ -113,10 +113,11 @@
 }
 </script>-->
 <script>
-    $('.btn').click(function(){
-    $(this).toggleClass('clicked');
-    $('.btn').not(this).removeClass('clicked');
-    })
+    //$('.btn').click(function(){
+    //$(this).toggleClass('clicked');
+    //$('.btn').not(this).removeClass('clicked');
+    //})
+
     // Добавить класс к каждому элементу таблицы (td)
     //var myTableApp = document.getElementsByTagName("TD");
     //var i;
@@ -143,9 +144,9 @@
     }
     //ActivitySyncGet
     // Добавляем визуализацию нажатой кнопки
-    //function ClickFunction(btn) {
-    //btn.classList.add("active");
-    //}
+    function ClickFunction(btn) {
+    btn.classList.add("clicked");
+    }
     
     // Добавляем логику по выбору хостов и компонент
     var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
