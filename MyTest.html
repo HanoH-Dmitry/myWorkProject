@@ -25,8 +25,8 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="btnAll mskIotApp01"></th>
-                <td><input type="button" value="Activity_sync" class="btn" id="btnAll ActivitySyncGet"></td>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="mskIotApp01"></th>
+                <td><input type="button" value="Activity_sync" class="btn" id="ActivitySyncGet"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
                 <td>Ams_sync</td>
@@ -149,11 +149,13 @@
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
     
+    const mskIotApp01 = document.querySelector('#mskIotApp01 #ActivitySyncGet')
     const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
     //let btnAll = document.querySelectorAll('#mskIotApp01 #ActivitySyncGet');
     function changeBackground(){
 	    document.body.style.background = 'rgb(248, 4, 167)';
     }
+    mskIotApp01.addEventListener('click', _ => mskIotApp01.classList.toggle('is-active'));
     ActivitySyncGet.addEventListener('click', _ => ActivitySyncGet.classList.toggle('is-active'));
 
     // Добавляем логику по выбору хостов и компонент
