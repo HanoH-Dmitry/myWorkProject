@@ -149,13 +149,14 @@
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
     
-    const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
+    //const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
+    let btnAll = document.querySelectorAll('#mskIotApp01 #ActivitySyncGet');
 
-    function changeBackground2(){
+    function changeBackground(){
 	    document.body.style.background = 'rgb(248, 4, 167)';
     }
 
-    ActivitySyncGet.addEventListener('click', _ => ActivitySyncGet.classList.toggle('is-active'));
+    btnAll.addEventListener('click', _ => btnAll.classList.toggle('is-active'));
 
 
     // Добавляем логику по выбору хостов и компонент
