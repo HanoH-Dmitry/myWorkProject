@@ -146,10 +146,18 @@
     }
     //ActivitySyncGet
     // Добавляем визуализацию нажатой кнопки
-    function ClickFunction(btn) {
-    btn.classList.add("clicked");
-    }
+    //function ClickFunction(btn) {
+    //btn.classList.add("clicked");
     
+    const backgroundButton = document.querySelector('#backgroundButton')
+
+    function changeBackground2(){
+	    document.body.style.background = 'green';
+    }
+
+    backgroundButton.addEventListener('click', _ => backgroundButton.classList.toggle('is-active'));
+
+
     // Добавляем логику по выбору хостов и компонент
     var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
     //var i;
