@@ -55,7 +55,7 @@ th {
     background-color: rgb(19, 182, 68);
 }
 
-.btn {
+/*.btn {
     background-color: rgb(36, 43, 43);
     color: rgb(94, 248, 4);
 }
@@ -63,4 +63,33 @@ th {
 .active {
     background-color: rgb(94, 248, 4);
     color: rgb(36, 43, 43);
+}*/
+
+.btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #6ba9ec;
+    position: relative;
+    cursor: pointer;
+}
+.btn:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 12px solid transparent;
+    border-left: 22px solid white;
+    top: 15px;
+    left: 20px;
+}
+.btn.clicked {
+    background-color: #90919a;
+}
+.btn.clicked:before {
+    border: 5px solid white;
+    border-top: 0;
+    border-bottom: 0;
+    height: 22px;
+    width: 7px;
+    top: 16px;
 }
