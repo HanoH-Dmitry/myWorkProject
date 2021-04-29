@@ -25,8 +25,8 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="mskIotApp01"></th>
-                <td><input type="button" value="Activity_sync" class="btn" id="ActivitySyncGet"></td>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="btnAll mskIotApp01"></th>
+                <td><input type="button" value="Activity_sync" class="btn" id="btnAll ActivitySyncGet"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
                 <td>Ams_sync</td>
@@ -149,13 +149,11 @@
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
     
-    //const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
-    let btnAll = document.querySelectorAll('#mskIotApp01 #ActivitySyncGet');
-
+    const btnAll = document.querySelector('#mskIotApp01 #ActivitySyncGet')
+    //let btnAll = document.querySelectorAll('#mskIotApp01 #ActivitySyncGet');
     function changeBackground(){
 	    document.body.style.background = 'rgb(248, 4, 167)';
     }
-
     btnAll.addEventListener('click', _ => btnAll.classList.toggle('is-active'));
 
 
