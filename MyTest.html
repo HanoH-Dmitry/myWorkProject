@@ -24,7 +24,7 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn active" id="mskIotApp01" onclick="btn('Empty');active('buttonEvent')"></th>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="mskIotApp01" OnClick="ClickFunction('handler')"></th>
                 <td><input type="button" value="Activity_sync" class="btn" id="ActivitySyncGet"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
@@ -33,7 +33,7 @@
             </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app02" class="btn" name="mskIotApp02" OnClick="ClickFunction(this), App02();"></th>
+            <th rowspan="2"><input type="button" value="msk-iot-app02" class="btn" name="mskIotApp02" OnClick="ClickFunction(handler), App02();"></th>
                 <td id="BackendGet">Backend</td>
                 <td id="BackendPost">Backend</td>
             </tr>
@@ -144,12 +144,31 @@
     //    alert("This click to button Host!");
     //}
     //ActivitySyncGet
-    // Добавляем визуализацию нажатой кнопки
 
-    myBtn.addEventListener('click', function () {
-        btn('Empty');
-        active('buttonEvent');
-        alert('Test');
+    // Добавляем визуализацию нажатой кнопки ***********
+
+    //element.addEventListener(event, handler[, options]);
+    //event
+    //Имя события, например "click".
+    //    handler
+    //Ссылка на функцию - обработчик.
+    //    options
+    //Дополнительный объект со свойствами:
+    //once: если true, тогда обработчик будет автоматически удалён после выполнения.
+    //    capture: фаза, на которой должен сработать обработчик, подробнее об этом будет рассказано в главе Всплытие и погружение.Так исторически сложилось, что options может быть false / true, это то же самое, что { capture: false / true }.
+    //passive: если true, то указывает, что обработчик никогда не вызовет preventDefault(), подробнее об этом будет рассказано в главе Действия браузера по умолчанию.
+    //Для удаления обработчика следует использовать removeEventListener:
+
+    //element.removeEventListener(event, handler[, options]);
+
+    //button.addEventListener('click', function () {
+    function handler() {
+        alert('Спасибо!');
+    }
+    input.addEventListener("click", handler);
+        // ....
+    input.removeEventListener("click", handler);
+    alert('Test');
     })
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
