@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
         <table style="width:auto" id="myTableApp">
@@ -25,7 +24,7 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="mskIotApp01"></th>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn is-active" id="mskIotApp01"></th>
                 <td><input type="button" value="Activity_sync" class="btn" id="ActivitySyncGet"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
@@ -146,17 +145,23 @@
     }
     //ActivitySyncGet
     // Добавляем визуализацию нажатой кнопки
+
+    myBtn.addEventListener('click', function () {
+        ga('send', 'pageview', '/knopka-v-korzinu')
+        _gaq.push(['_trackEvent', 'Knopka', 'Podtverdit']);
+        alert('hello world');
+    })
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
     
-    const mskIotApp01 = document.querySelector('#mskIotApp01')
-    const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
+    //const mskIotApp01 = document.querySelector('#mskIotApp01')
+    //const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
     //let btnAll = document.querySelectorAll('#mskIotApp01 #ActivitySyncGet');
-    function changeBackground(){
-	    document.body.style.background = 'rgb(248, 4, 167)';
-    }
-    mskIotApp01.addEventListener('click', _ => mskIotApp01.classList.toggle('is-active'));
-    ActivitySyncGet.addEventListener('click', _ => ActivitySyncGet.classList.toggle('is-active'));
+    //function changeBackground(){
+	//    document.body.style.background = 'rgb(248, 4, 167)';
+    //}
+    //mskIotApp01.addEventListener('click', _ => mskIotApp01.classList.toggle('is-active'));
+    //ActivitySyncGet.addEventListener('click', _ => ActivitySyncGet.classList.toggle('is-active'));
 
     // Добавляем логику по выбору хостов и компонент
     var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
