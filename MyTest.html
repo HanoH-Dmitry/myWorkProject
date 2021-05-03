@@ -24,7 +24,7 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn is-active" id="mskIotApp01" onclick="ga('Empty');_gaq.push(['buttonEvent']);"></th>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn is-active" id="mskIotApp01" onclick="btn('Empty');is-active('buttonEvent')"></th>
                 <td><input type="button" value="Activity_sync" class="btn" id="ActivitySyncGet"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
@@ -147,8 +147,8 @@
     // Добавляем визуализацию нажатой кнопки
 
     myBtn.addEventListener('click', function () {
-        ga('Empty')
-        _gaq.push(['buttonEvent']);
+        btn('Empty')
+        is-active(['buttonEvent']);
         alert('Test');
     })
     //function ClickFunction(btn) {
