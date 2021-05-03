@@ -60,7 +60,7 @@ th {
     color: rgb(94, 248, 4);
 }
 
-.btn.is-active {
+.active {
     background-color: rgb(248, 4, 167);
     color: rgb(36, 43, 43);
 }
