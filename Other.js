@@ -194,3 +194,11 @@ curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.c
 
 
 https://dwweb.ru/page/js/events/001_onclick_v_javascript.html#paragraph_onclick_v_javascript
+
+
+        <input id="elem" type="button" value="Нажми меня!">
+            <script>
+                elem.onclick = function() {
+                    alert('Спасибо');
+  };
+</script>
