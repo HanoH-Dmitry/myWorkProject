@@ -207,3 +207,16 @@ https://dwweb.ru/page/js/events/001_onclick_v_javascript.html#paragraph_onclick_
 document.body.addEventListener('click', e => {
   if (e.target.classList.contains('classes')) alert(1);
 })
+
+
+  <div id="one"></div>
+
+            <script>
+                var div = document.getElementById('one');
+                div.addEventListener('click', foo, false);
+                
+    function foo() {
+                    alert('Hi!');
+      div.removeEventListener('click', foo, false);
+    }
+  </script>
