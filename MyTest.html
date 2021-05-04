@@ -165,11 +165,8 @@
     function one() {
         mskIotApp01.classList.add("active");
     }
-    function two() {
-        mskIotApp01.classList.remove("active");
-    }
-    mskIotApp01.addEventListener("click", one);
-    mskIotApp01.removeEventListener("click", two);
+    mskIotApp01.addEventListener('click', one, false);
+    mskIotApp01.removeEventListener('click', one, false);
 
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
