@@ -201,4 +201,9 @@ https://dwweb.ru/page/js/events/001_onclick_v_javascript.html#paragraph_onclick_
                 elem.onclick = function() {
                     alert('Спасибо');
   };
-</script>
+            </script>
+
+
+document.body.addEventListener('click', e => {
+  if (e.target.classList.contains('classes')) alert(1);
+})
