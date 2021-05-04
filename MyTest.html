@@ -168,12 +168,13 @@
     //mskIotApp01.addEventListener('click', one, false);
     //mskIotApp01.removeEventListener('click', one, false);
 
-    var allButton = document.querySelectorAll('button');
-    allButton.addEventListener('click', function(ev) {
-        if (ev.target.tagName === 'mskIotApp01') {
-        ev.target.classList.add('active');
-      }
-    }, false);
+    var button = document.getElementById('mskIotApp01');
+    button.addEventListener('click', foo, true);
+             
+    function foo() {
+        mskIotApp01.classList.add("active");
+    button.removeEventListener('click', foo, true);
+    }
 
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
