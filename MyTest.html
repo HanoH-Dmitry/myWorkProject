@@ -162,11 +162,18 @@
     //element.removeEventListener(event, handler[, options]);
 
     //button.addEventListener('click', function () {
-    function one() {
-        mskIotApp01.classList.add("active");
-    }
-    mskIotApp01.addEventListener('click', one, false);
-    mskIotApp01.removeEventListener('click', one, false);
+    //function one() {
+      //  mskIotApp01.classList.add("active");
+    //}
+    //mskIotApp01.addEventListener('click', one, false);
+    //mskIotApp01.removeEventListener('click', one, false);
+
+    var allButton = document.querySelector('button');
+    allButton.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'mskIotApp01') {
+        ev.target.classList.add('active');
+      }
+    }, false);
 
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
