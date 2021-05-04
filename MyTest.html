@@ -24,7 +24,7 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="mskIotApp01" OnClick="ClickFunction('handler')"></th>
+            <th rowspan="2"><input type="button" value="msk-iot-app01" class="btn" id="mskIotApp01"></th>
                 <td><input type="button" value="Activity_sync" class="btn" id="ActivitySyncGet"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
@@ -165,10 +165,9 @@
     function handler() {
         alert('Спасибо!');
     }
-    input.addEventListener("click", handler);
+    mskIotApp01.addEventListener("click", handler);
         // ....
-    input.removeEventListener("click", handler);
-    alert('Test');
+    mskIotApp01.removeEventListener("click", handler);
 
     //function ClickFunction(btn) {
     //btn.classList.add("clicked");
