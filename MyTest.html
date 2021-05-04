@@ -172,21 +172,9 @@
     button.addEventListener('click', foo, true);
              
     function foo() {
-        mskIotApp01.removeClass("active");
+        mskIotApp01.classList.add("active");
     button.removeEventListener('click', foo, true);
     }
-
-    //function ClickFunction(btn) {
-    //btn.classList.add("clicked");
-    
-    //const mskIotApp01 = document.querySelector('#mskIotApp01')
-    //const ActivitySyncGet = document.querySelector('#ActivitySyncGet')
-    //let btnAll = document.querySelectorAll('#mskIotApp01 #ActivitySyncGet');
-    //function changeBackground(){
-	//    document.body.style.background = 'rgb(248, 4, 167)';
-    //}
-    //mskIotApp01.addEventListener('click', _ => mskIotApp01.classList.toggle('is-active'));
-    //ActivitySyncGet.addEventListener('click', _ => ActivitySyncGet.classList.toggle('is-active'));
 
     // Добавляем логику по выбору хостов и компонент
     //var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
