@@ -24,7 +24,7 @@
                 </tr>
             </tr>
             <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app01" class="" id="mskIotApp01"></th>
+            <th rowspan="2"><input type="button" value="App01" class="btn" id="mskIotApp01"></th>
                 <td><input type="button" value="Activity_sync" class="" id="ActivitySyncGet"></td>
                 <td id="ActivitySyncPost">Activity_sync</td>
             <tr>
@@ -163,16 +163,22 @@
     //mskIotApp01.addEventListener('click', one, false);
     //mskIotApp01.removeEventListener('click', one, false);
 
-    var button = document.getElementById('mskIotApp01');
-    function foo() {
-        mskIotApp01.classList.add("active");
-        button.addEventListener('click', foo, true);
-    }
-    function foo() {
-        mskIotApp01.classList.add("btn");
-        button.removeEventListener('click', foo, true);
-    }
+    //var button = document.getElementById('mskIotApp01');
+    //function foo() {
+      //  mskIotApp01.classList.add("active");
+      //  button.addEventListener('click', foo, true);
+    //}
+    //function foo() {
+      //  mskIotApp01.classList.add("btn");
+      //  button.removeEventListener('click', foo, true);
+    //}
 
+    var list = document.querySelector('input');
+    list.addEventListener('click', function (ev) {
+        if (ev.target.addEventListener === 'mskIotApp01') {
+        ev.target.classList.add('active');
+      }
+    }, false);
     // Добавляем логику по выбору хостов и компонент
     //var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
     //var i;
