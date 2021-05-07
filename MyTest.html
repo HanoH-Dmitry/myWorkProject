@@ -119,6 +119,64 @@
             ev.target.classList.add('active');
           }
         }, false);
+
+                var btns = document.querySelectorAll('button')
+        // Проходим по массиву
+        btns.forEach(function (btn) {
+            // Вешаем событие клик
+            btn.addEventListener('click', function (e) {
+                console.log(e.target.classList);
+            })
+        })
+
+        // Добавляем визуализацию нажатой кнопки ***********
+
+        //element.addEventListener(event, handler[, options]);
+        //event
+        //Имя события, например "click".
+        //    handler
+        //Ссылка на функцию - обработчик.
+        //    options
+        //Для удаления обработчика следует использовать removeEventListener:
+
+        //element.removeEventListener(event, handler[, options]);
+
+        //button.addEventListener('click', function () {
+        //function one() {
+        //  mskIotApp01.classList.add("active");
+        //}
+        //mskIotApp01.addEventListener('click', one, false);
+        //mskIotApp01.removeEventListener('click', one, false);
+
+        //mskIotApp01 .addEventListener("click", myFoo)
+        //function myFoo ()
+        //{
+        //    alert("This click to button Host!");
+        //}
+        //ActivitySyncGet
+
+        //var button = document.getElementById('mskIotApp01');
+        //function foo() {
+        //  mskIotApp01.classList.add("active");
+        //  button.addEventListener('click', foo, true);
+        //}
+        //function foo() {
+        //  mskIotApp01.classList.add("btn");
+        //  button.removeEventListener('click', foo, true);
+        //}
+
+        // Добавляем логику по выбору хостов и компонент
+        //var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
+        //var i;
+        //for (i = 0; i < hostApp.length; i++) {
+            //var span = document.createElement("SPAN");
+            //hostApp[i].appendChild(span);
+        //}
+            //if (ev.target.getElementById === 'mskIotApp01') {
+            //    console.log('true')
+            //} else if (ev.target.getElementById === 'ActivitySyncGet') {
+            //    text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
+        //}
     </script>-->
     <script>
         // Добавить класс к каждому элементу таблицы (td)
@@ -140,67 +198,18 @@
         //  }
         //}, false);
 
-        //mskIotApp01 .addEventListener("click", myFoo)
-        //function myFoo ()
-        //{
-        //    alert("This click to button Host!");
-        //}
-        //ActivitySyncGet
-
-        // Добавляем визуализацию нажатой кнопки ***********
-
-        //element.addEventListener(event, handler[, options]);
-        //event
-        //Имя события, например "click".
-        //    handler
-        //Ссылка на функцию - обработчик.
-        //    options
-        //Дополнительный объект со свойствами:
-        //once: если true, тогда обработчик будет автоматически удалён после выполнения.
-        //    capture: фаза, на которой должен сработать обработчик, подробнее об этом будет рассказано в главе Всплытие и погружение.Так исторически сложилось, что options может быть false / true, это то же самое, что { capture: false / true }.
-        //passive: если true, то указывает, что обработчик никогда не вызовет preventDefault(), подробнее об этом будет рассказано в главе Действия браузера по умолчанию.
-        //Для удаления обработчика следует использовать removeEventListener:
-
-        //element.removeEventListener(event, handler[, options]);
-
-        //button.addEventListener('click', function () {
-        //function one() {
-        //  mskIotApp01.classList.add("active");
-        //}
-        //mskIotApp01.addEventListener('click', one, false);
-        //mskIotApp01.removeEventListener('click', one, false);
-
-        //var button = document.getElementById('mskIotApp01');
-        //function foo() {
-        //  mskIotApp01.classList.add("active");
-        //  button.addEventListener('click', foo, true);
-        //}
-        //function foo() {
-        //  mskIotApp01.classList.add("btn");
-        //  button.removeEventListener('click', foo, true);
-        //}
-
         // Выбираем все кнопки на странице и получаем массив
-        var btns = document.querySelectorAll('button')
-        // Проходим по массиву
-        btns.forEach(function (btn) {
-            // Вешаем событие клик
-            btn.addEventListener('click', function (e) {
-                console.log(e.target.classList);
-            })
-        })
-        // Добавляем логику по выбору хостов и компонент
-        //var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
-        //var i;
-        //for (i = 0; i < hostApp.length; i++) {
-            //var span = document.createElement("SPAN");
-            //hostApp[i].appendChild(span);
-        //}
-        //if (ev.target.getElementById === 'mskIotApp01') {
-        //    console.log('true')
-        //} else if (ev.target.getElementById === 'ActivitySyncGet') {
-        //    text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
-        //}
+
+        var App01 = document.getElementById('mskIotApp01');
+        App01.addEventListener('click', foo, false);
+
+        function foo() { console.log(target.classList); }
+
+        var ASG = document.getElementById('ActivitySyncGet');
+        ASG.addEventListener('click', foo1, false);
+
+        function foo1() { console.log(target.classList); }
+
     </script>
 
     <!--<button id="onclick_v_addEventListener">Это третий способ реализации Onclick в JavaScript</button>
