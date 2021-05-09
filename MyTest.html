@@ -25,7 +25,7 @@
         </tr>
         </tr>
         <tr>
-            <th rowspan="2"><div class="switch-btn"></div>msk-iot-app01</th>
+            <th rowspan="2"><div class="switch-btn" id="mskIotApp01"></div>msk-iot-app01</th>
             <td><button id="ActivitySyncGet">Activity_sync</button></td>
             <td id="ActivitySyncPost">Activity_sync</td>
         <tr>
@@ -211,13 +211,21 @@
 
         // Выбираем все кнопки на странице и получаем массив
 
-        $('.switch-btn').click(function(){
-        $(this).toggleClass('switch-on');
-            if ($(this).hasClass('switch-on')) {
-                $(this).trigger('on.switch');
-            } else {
-                $(this).trigger('off.switch');
-            }
+        $(function () {
+            $('.switch-btn').click(function () {
+                $(this).toggleClass('switch-on');
+                    if ($(this).hasClass('switch-on')) {
+                        $(this).trigger('on.switch');
+                    } else {
+                        $(this).trigger('off.switch');
+                    }
+            });
+            $('.switch-btn').on('on.switch', function () {
+                $($(this).id('mskIotApp01')).text.value('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
+            });
+            $('.switch-btn').on('off.switch', function () {
+                $($(this).id('mskIotApp01')).addClass('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
+            });
         });
 
     </script>
