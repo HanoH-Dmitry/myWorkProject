@@ -83,7 +83,7 @@ th {
     background: #fff; /* цвет кнопки */
     top: auto; /* положение кнопки по вертикали относительно основы */
     left: auto; /* положение кнопки по горизонтали относительно основы */
-    transition-duration: 300ms; /* анимация */
+    transition-duration: 250ms; /* анимация */
     box-shadow: 0 0 3px 0 #999999; /* тень */
     position: absolute;
     z-index: 1;
