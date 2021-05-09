@@ -20,13 +20,6 @@ table, td {
     border-collapse: collapse;
     padding: auto;
 }
-tr th main. {
-    border: 1px solid rgb(94, 248, 4);
-    text-align: left;
-    color: rgba(240, 17, 221, 0.932);
-    border-collapse: collapse;
-    padding: auto;
-}
 
 th {
     border: 1px solid rgb(94, 248, 4);
