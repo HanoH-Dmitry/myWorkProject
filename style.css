@@ -25,6 +25,7 @@ tr th main. {
     text-align: left;
     color: rgba(225, 240, 17, 0.932);
     border-collapse: collapse;
+    padding: auto;
 }
 
 th {
