@@ -24,7 +24,7 @@
         </tr>
         </tr>
         <tr>
-            <th rowspan="2"><button id="mskIotApp01">msk-iot-app01</button></th>
+            <th rowspan="2" class="switch-btn">msk-iot-app01</th>
             <td><button id="ActivitySyncGet">Activity_sync</button></td>
             <td id="ActivitySyncPost">Activity_sync</td>
         <tr>
@@ -177,6 +177,16 @@
             //} else if (ev.target.getElementById === 'ActivitySyncGet') {
             //    text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
         //}
+
+        var App01 = document.getElementById('mskIotApp01');
+        App01.addEventListener('click', foo, false);
+
+        function foo() { console.log(target.classList); }
+
+        var ASG = document.getElementById('ActivitySyncGet');
+        ASG.addEventListener('click', foo1, false);
+
+        function foo1() { console.log(target.classList); }
     </script>-->
     <script>
         // Добавить класс к каждому элементу таблицы (td)
@@ -200,15 +210,14 @@
 
         // Выбираем все кнопки на странице и получаем массив
 
-        var App01 = document.getElementById('mskIotApp01');
-        App01.addEventListener('click', foo, false);
-
-        function foo() { console.log(target.classList); }
-
-        var ASG = document.getElementById('ActivitySyncGet');
-        ASG.addEventListener('click', foo1, false);
-
-        function foo1() { console.log(target.classList); }
+        $('.switch-btn').click(function(){
+        $(this).toggleClass('switch-on');
+            if ($(this).hasClass('switch-on')) {
+                $(this).trigger('on.switch');
+            } else {
+                $(this).trigger('off.switch');
+            }
+        });
 
     </script>
 
