@@ -63,7 +63,7 @@ th {
 
 .switch-btn {
     display: inline-block;
-    width: 25px; /* ширина переключателя */
+    width: 20px; /* ширина переключателя */
     height: 10px; /* высота переключателя */
     border-radius: 5px; /* радиус скругления */
     background: #bfbfbf; /* цвет фона */
