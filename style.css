@@ -113,3 +113,5 @@ th {
     display:inline-block;
     cursor:pointer;
 }
+.result{display:none; margin-top:5px; font-size:14px; color:#333;}
+.result span{color:#C03; font-weight:700;}
