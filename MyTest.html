@@ -238,7 +238,7 @@
                 $($(this).id('mskIotApp01')).text.value('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
             });
             $('.switch-btn').on('off.switch', function () {
-                $($(this).id('mskIotApp01')).addClass('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
+                $($(this).id('mskIotApp01')).text.value('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
             });
         });
 
@@ -246,7 +246,7 @@
         $(document).ready(function(){
             $('.switch').css('background', 'url("switch.png")');
                 $('.on_off').css('display','none');
-                $('.on, .off').css('text-indent','-10000px');
+                $('.on, .off').css('text-indent','-1000px');
             $("input[name=on_off]").change(function() {
         var button = $(this).val();
       
