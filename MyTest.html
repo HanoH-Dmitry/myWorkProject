@@ -14,8 +14,8 @@
             <th colspan="3" class="colAppWeb">App</th>
         <tr>
             <th>HOSTs</th>
-            <th><div class="toggleSwitch" onclick="toggle(this.firstChild, 'on', 'off');"><div class="slider off" /></div>GET</th>
-            <th><div class="toggleSwitch" onclick="toggle(this.firstChild, 'on', 'off');"><div class="slider off" /></div>POST</th>
+            <th>GET</th>
+            <th>POST</th>
         </tr>
         </tr>
         <tr>
@@ -221,19 +221,6 @@
                 $($(this).id('mskIotApp01')).text.value('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
             });
         });
-
-        function replaceClass(elt, oldClass, newClass) {
-            var oldRE = RegExp('\b'+oldClass+'\b');
-                elt.className = elt.className.replace(oldRE, newClass);
-        }
-        function toggle(elt, on, off) {
-            var onRE = RegExp('\b'+on+'\b');
-                if (onRE.test(elt.className)) {
-                    elt.className = elt.className.replace(onRE, off);
-                } else {
-                    replaceClass(elt, off, on);
-                }
-        }
     </script>
 
     <!--<button id="onclick_v_addEventListener">Это третий способ реализации Onclick в JavaScript</button>
