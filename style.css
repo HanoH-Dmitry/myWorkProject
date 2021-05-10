@@ -99,19 +99,5 @@ th {
 
 /* Тумблеры */
 
-.switch{
-    border:none;
-    background:left no-repeat;
-    width:105px;
-    height:46px;
-    padding:0;
-    margin:0;
-}
-.on, .off{
-    width:50px;
-    height:40px;
-    display:inline-block;
-    cursor:pointer;
-}
-.result{display:none; margin-top:5px; font-size:14px; color:rgb(161, 160, 160);}
-.result span{color:#C03; font-weight:700;}
+.on  { background:blue; }
+.off { background:red; }
