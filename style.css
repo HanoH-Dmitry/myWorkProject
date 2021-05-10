@@ -100,16 +100,16 @@ th {
 /* Тумблеры */
 
 .toggleSwitch {
-    width: ...;
-    height: ...;
+    width: 20px;
+    height: 10px;
     /* add other styling as appropriate to position element */
     position: relative;
 }
 .slider {
-    background-image: url(...);
+    background: rgb(219, 24, 193) ;
     position: absolute;
-    width: ...;
-    height: ...;
+    width: 20px;
+    height: 10px;
 }
 .slider.on {
     right: 0;
