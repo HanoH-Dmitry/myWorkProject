@@ -14,8 +14,8 @@
             <th colspan="3" class="colAppWeb">App</th>
         <tr>
             <th>HOSTs</th>
-            <th><input type="button" id="btn" value="button" class="off" onclick="toggleState(this)"/>GET</th>
-            <th><input type="button" id="btn" value="button" class="off" onclick="toggleState(this)" />POST</th>
+            <th><div class="toggleSwitch" onclick="toggle(this.firstChild, 'on', 'off');"><div class="slider off" /></div>GET</th>
+            <th><div class="toggleSwitch" onclick="toggle(this.firstChild, 'on', 'off');"><div class="slider off" /></div>POST</th>
         </tr>
         </tr>
         <tr>
@@ -222,12 +222,17 @@
             });
         });
 
-        function toggleState(item){
-           if(item.className == "on") {
-              item.className="off";
-           } else {
-              item.className="on";
-           }
+        function replaceClass(elt, oldClass, newClass) {
+            var oldRE = RegExp('\b'+oldClass+'\b');
+                elt.className = elt.className.replace(oldRE, newClass);
+        }
+        function toggle(elt, on, off) {
+            var onRE = RegExp('\b'+on+'\b');
+                if (onRE.test(elt.className)) {
+                    elt.className = elt.className.replace(onRE, off);
+                } else {
+                    replaceClass(elt, off, on);
+                }
         }
     </script>
 
