@@ -215,11 +215,10 @@
                     }
             });
             $('.switch-btn').on('on.switch', function () {
-                $($(this).id('mskIotApp01')).text.value('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
+                $($(this).attr('data-id')).removeClass('bl-hide');
             });
             $('.switch-btn').on('off.switch', function () {
-                $($(this).id('mskIotApp01')).text.value('curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &');
-            });
+                $($(this).attr('data-id')).addClass('bl-hide');
         });
     </script>
 
