@@ -164,11 +164,11 @@ th {
 	background-color: #70c767;
 }
 .checkbox-green input[type="checkbox"]:checked + .checkbox-green-switch:before {
-	content: attr(data-label-PG);
+	content: attr(data-label-off);
 	left: 0;
 }
 .checkbox-green input[type="checkbox"]:checked + .checkbox-green-switch:after {
-	content: attr(data-label-PP);
+	content: attr(data-label-on);
 	color: #4fb743;
 	transform: translate3d(44px, 0, 0);
 }
