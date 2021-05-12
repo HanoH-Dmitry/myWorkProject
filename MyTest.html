@@ -99,7 +99,7 @@
             <td id="XvlrPushPost">Xvlr_push</td>
         </tr>
     </table>
-    <textarea type="text" value="" id="text" style="width: 320px; height: 300px; background-color: rgba(36, 43, 43); color:chartreuse"></textarea>
+    <textarea type="text" value="" id="text textarea" style="width: 320px; height: 300px; background-color: rgba(36, 43, 43); color:chartreuse"></textarea>
     <div class="out">
     </div>
     <!--<script>
@@ -238,6 +238,13 @@
  
         $('.checkbox-green input').focusout(function(){
 	        $(this).parent().removeClass('focused');
+        });
+
+        // Автовысота для текстового поля
+
+        $('#textarea').on('input', function(){
+	        this.style.height = '1px';
+	        this.style.height = (this.scrollHeight + 6) + 'px'; 
         });
     </script>   
 
