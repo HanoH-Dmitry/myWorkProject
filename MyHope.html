@@ -28,9 +28,8 @@
         
         <!-- Контент -->
         <div class="tabs-items">
-            <div class="tabs-item" id="tab-1">
-                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
-                <div id="a" onclick="copyDivToClipboard()">Copy</div>
+            <div class="tabs-item" id="tab-1" onclick="copyDivToClipboard()">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>Copy
             </div>
             <div class="tabs-item" id="tab-2">
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & <br> curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
@@ -91,7 +90,7 @@
                     window.getSelection().addRange(range); // to select text
                     document.execCommand("copy");
                     window.getSelection().removeAllRanges();// to deselect
-                    
+        }        
         function CopyToClipboard(containerid) {
             if (window.getSelection) {
                 if (window.getSelection().empty) { // Chrome
