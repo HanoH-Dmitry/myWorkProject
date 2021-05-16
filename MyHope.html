@@ -30,6 +30,7 @@
         <div class="tabs-items">
             <div class="tabs-item" id="tab-1">
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+                <div id="a" onclick="copyDivToClipboard()">Copy</div>
             </div>
             <div class="tabs-item" id="tab-2">
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & <br> curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
@@ -80,6 +81,32 @@
                 $('#tabs .tabs-nav a[href=' + $(this).data('id')+ ']').click();
             });
         });
+
+        // Добавляем к каждой кнопке копирование в буфер (с очисткой буфера при нажатии на другую кнопку)
+
+        function CopyToClipboard(containerid) {
+            if (window.getSelection) {
+                if (window.getSelection().empty) { // Chrome
+                    window.getSelection().empty();
+                } else if (window.getSelection().removeAllRanges) { // Firefox
+                    window.getSelection().removeAllRanges();
+                }
+            } else if (document.selection) { // IE?
+                document.selection.empty();
+            }
+
+            if (document.selection) {
+                var range = document.body.createTextRange();
+                range.moveToElementText(document.getElementById(containerid));
+                range.select().createTextRange();
+                document.execCommand("copy");
+            } else if (window.getSelection) {
+                var range = document.createRange();
+                range.selectNode(document.getElementById(containerid));
+                window.getSelection().addRange(range);
+                document.execCommand("copy");
+            }
+        }
         </script>
 </body>
 </html>
