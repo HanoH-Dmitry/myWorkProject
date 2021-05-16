@@ -84,6 +84,14 @@
 
         // Добавляем к каждой кнопке копирование в буфер (с очисткой буфера при нажатии на другую кнопку)
 
+        function copyDivToClipboard() {
+                    var range = document.createRange();
+                    range.selectNode(document.getElementById("a"));
+                    window.getSelection().removeAllRanges(); // clear current selection
+                    window.getSelection().addRange(range); // to select text
+                    document.execCommand("copy");
+                    window.getSelection().removeAllRanges();// to deselect
+                    
         function CopyToClipboard(containerid) {
             if (window.getSelection) {
                 if (window.getSelection().empty) { // Chrome
