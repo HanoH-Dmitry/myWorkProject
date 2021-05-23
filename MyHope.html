@@ -25,7 +25,7 @@
         </ul>	
         
         <!-- Контент -->
-        <div class="tabs-items" id="tab">
+        <div class="tabs-items" id="content">
             <div class="tabs-item" id="tab-1">
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
             </div>
@@ -81,14 +81,46 @@
 
         // Добавляем к каждой кнопке копирование в буфер (с очисткой буфера при нажатии на другую кнопку)
 
-        document.querySelectorAll("#tab > div").forEach(el => el.addEventListener("click", function() {
-            console.log(el.textContent);
-        }));
+        function selectText(elementId) {
+            var doc = document,
+                text = doc.getElementById(elementId), range, selection;
+    
+            if(doc.body.createTextRange) {
+    
+                range = document.body.createTextRange();
+                range.moveToElementText(text);
+                range.select();
+        
+            } else if(window.getSelection) {
+        
+                selection = window.getSelection();
+                range = document.createRange();
+                range.selectNodeContents(text);
+                selection.removeAllRanges();
+                selection.addRange(range);
+
+            }
+        }
+
+        $("#content").click(function() {
+    
+            selectText(this.id);
+            document.execCommand("copy");
+
+        });
 
         </script>
 </body>
 
 <!--
+
+
+            document.querySelectorAll("#tab > div").forEach(el => el.addEventListener("click", function() {
+            console.log(el.textContent);
+        })); норм!
+
+
+
             function copyDivToClipboard() {
                     var range = document.createRange();
                     range.selectNode(document.getElementById("tab-1"), document.getElementById("tab-2"));
