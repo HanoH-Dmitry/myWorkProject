@@ -81,7 +81,33 @@
 
         // Добавляем к каждой кнопке копирование в буфер (с очисткой буфера при нажатии на другую кнопку)
 
-        function copyDivToClipboard() {
+         /**
+         * Навесить на HTML-элемент обработчик события click.
+         * По клику копировать содержимое HTML-элемента.
+         * @param {HTMLElement} divToCopy HTML-элемент, на который надо навесить обработчик клика
+         */
+         function divCopy(divToCopy) {
+            function modifyCopy(e) {
+                let divText = this.innerHTML;
+                let tempInput = document.createElement("input");
+                tempInput.value = divText;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                console.log('copied');
+            }
+ 
+            divToCopy.addEventListener('click', modifyCopy);
+        }
+ 
+        divCopy(document.querySelector('div'));
+
+        </script>
+</body>
+
+<!--
+            function copyDivToClipboard() {
                     var range = document.createRange();
                     range.selectNode(document.getElementById("tab-1"), document.getElementById("tab-2"));
                     window.getSelection().removeAllRanges(); // clear current selection
@@ -112,6 +138,5 @@
                 document.execCommand("copy");
             }
         }
-        </script>
-</body>
+-->
 </html>
