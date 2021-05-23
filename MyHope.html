@@ -79,7 +79,7 @@
             });
         });
 
-        // Добавляем к каждой кнопке копирование в буфер (с очисткой буфера при нажатии на другую кнопку)
+        // Добавляем каждому div выделение текста
 
         function selectText(elementId) {
             var doc = document,
@@ -102,12 +102,14 @@
             }
         }
 
-        $("#content").click(function() {
+        // Добавляем автокопирование текста при нажатии на div
+        
+        //$("#content").click(function() {
     
-            selectText(this.id);
-            document.execCommand("copy");
+        //    selectText(this.id);
+        //    document.execCommand("copy");
 
-        });
+        //});
 
         </script>
 </body>
