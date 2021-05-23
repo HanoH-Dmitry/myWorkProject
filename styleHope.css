@@ -64,9 +64,9 @@
 .tabs-flex {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap-reverse;
+	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: flex-start;
 	align-content: flex-end;
 }
 
