@@ -59,7 +59,7 @@
 	border: 1px solid #ccc;
 	border-radius: 0 5px 5px 0;	
 	min-height: auto;
-    width: 700px;
+    width: auto;
 }
 .tabs-flex {
 	display: flex;
