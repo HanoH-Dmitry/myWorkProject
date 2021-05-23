@@ -60,11 +60,12 @@
     </div>
 
     <script>
+
         $(function() {
             var tab = $('#tabs .tabs-items > div'); 
             tab.hide().filter(':first').show(); 
             
-            // Клики по вкладкам.
+            // Клики по вкладкам
             $('#tabs .tabs-nav a').click(function(){
 
                 tab.hide(); 
@@ -75,11 +76,11 @@
 
             }).filter(':first').click();
          
-            // Клики по якорным ссылкам.
+            // Клики по якорным ссылкам
             $('.tabs-target').click(function(){
 
                 $('#tabs .tabs-nav a[href=' + $(this).data('id')+ ']').click();
-                
+
             });
         });
 
@@ -106,57 +107,15 @@
             }
         }
 
-        // Добавляем автокопирование текста при нажатии на div
-
-        //$("#content").click(function() {
+        $("#content").click(function() {
     
-        //    selectText(this.id);
+            selectText(this.id);
+
+        // Добавляем автокопирование текста при нажатии на div
         //    document.execCommand("copy");
 
-        //});
+        });
 
         </script>
 </body>
-
-<!--
-
-
-            document.querySelectorAll("#tab > div").forEach(el => el.addEventListener("click", function() {
-            console.log(el.textContent);
-        })); норм!
-
-
-
-            function copyDivToClipboard() {
-                    var range = document.createRange();
-                    range.selectNode(document.getElementById("tab-1"), document.getElementById("tab-2"));
-                    window.getSelection().removeAllRanges(); // clear current selection
-                    window.getSelection().addRange(range); // to select text
-                    document.execCommand("copy");
-                    window.getSelection().removeAllRanges();// to deselect
-        }        
-        function CopyToClipboard(containerid) {
-            if (window.getSelection) {
-                if (window.getSelection().empty) { // Chrome
-                    window.getSelection().empty();
-                } else if (window.getSelection().removeAllRanges) { // Firefox
-                    window.getSelection().removeAllRanges();
-                }
-            } else if (document.selection) { // IE?
-                document.selection.empty();
-            }
-
-            if (document.selection) {
-                var range = document.body.createTextRange();
-                range.moveToElementText(document.getElementById(containerid));
-                range.select().createTextRange();
-                document.execCommand("copy");
-            } else if (window.getSelection) {
-                var range = document.createRange();
-                range.selectNode(document.getElementById(containerid));
-                window.getSelection().addRange(range);
-                document.execCommand("copy");
-            }
-        }
--->
 </html>
