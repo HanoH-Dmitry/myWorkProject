@@ -25,7 +25,7 @@
         </ul>	
         
         <!-- Контент -->
-        <div class="tabs-items">
+        <div class="tabs-items" id="tab">
             <div class="tabs-item" id="tab-1">
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
             </div>
@@ -81,22 +81,9 @@
 
         // Добавляем к каждой кнопке копирование в буфер (с очисткой буфера при нажатии на другую кнопку)
 
-        /**
-         * Навесить на HTML-элемент обработчик события click.
-         * По клику копировать содержимое HTML-элемента.
-         * @param {HTMLElement} divToCopy HTML-элемент, на который надо навесить обработчик клика
-         */
-         function divCopy(divToCopy) {
-            function modifyCopy(e) {
-                let divText = divToCopy.innerHTML;
-                document.execCommand('copy', false, divText);
-                console.log('copied');
-            }
- 
-            document.addEventListener('click', modifyCopy);
-        }
- 
-        divCopy(document.querySelector("div"));
+        document.querySelectorAll("#tab > div").forEach(el => el.addEventListener("click", function() {
+            console.log(el.textContent);
+        }));
 
         </script>
 </body>
