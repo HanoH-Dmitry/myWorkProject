@@ -61,6 +61,14 @@
 	min-height: auto;
     width: 700px;
 }
+.tabs-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+	align-items: flex-end;
+	align-content: flex-end;
+}
 
 /** Основная навигация **/
 
