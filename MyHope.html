@@ -81,27 +81,22 @@
 
         // Добавляем к каждой кнопке копирование в буфер (с очисткой буфера при нажатии на другую кнопку)
 
-         /**
+        /**
          * Навесить на HTML-элемент обработчик события click.
          * По клику копировать содержимое HTML-элемента.
          * @param {HTMLElement} divToCopy HTML-элемент, на который надо навесить обработчик клика
          */
          function divCopy(divToCopy) {
             function modifyCopy(e) {
-                let divText = this.innerHTML;
-                let tempInput = document.createElement("input");
-                tempInput.value = divText;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand("copy");
-                document.body.removeChild(tempInput);
+                let divText = divToCopy.innerHTML;
+                document.execCommand('copy', false, divText);
                 console.log('copied');
             }
  
-            divToCopy.addEventListener('click', modifyCopy);
+            document.addEventListener('click', modifyCopy);
         }
  
-        divCopy(document.querySelector('div'));
+        divCopy(document.querySelector("div"));
 
         </script>
 </body>
