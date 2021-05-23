@@ -76,6 +76,7 @@
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    border-block-width: auto;
 }
 
 /** Основная навигация **/
