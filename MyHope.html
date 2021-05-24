@@ -169,38 +169,14 @@
             }
         }
 
-        $("#content").mouseup(function() {
-
-            var highlighted_text = "";
-
-            if(window.getSelection) {
-
-                highlighted_text = window.getSelection().toString();
-
-            } else if (document.selection && document.selection.type != "Control") {
-
-                highlighted_text = document.selection.createRange().text;
-
-            }
-
-            if(highlighted_text == "") {
-
-                selectText(this.id);
-
-                document.execCommand("copy");
-
-            }
-
-        });
-
-        //$("#content").click(function() {
+        $("#content").click(function() {
     
-        //    selectText(this.id);
+            selectText(this.id);
 
         // Добавляем автокопирование текста при нажатии на div (выделенный текст)
-        //   document.execCommand("copy");
+           document.execCommand("copy");
 
-        //});
+        });
 
     </script>
 </body>
