@@ -41,9 +41,9 @@ body {
 }
  
 .menu-wrap ul ul {
-	display:none; 
+	display:block; 
 	list-style:none; 
-	position:relative; 
+	position:static; 
 	background-color:#53bd84;
 	left:300px; 
 	top:50px; 
