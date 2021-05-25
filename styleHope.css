@@ -52,7 +52,8 @@ body {
  
 .menu-wrap ul ul li a {
 	float:none; 
-	display:block; 
+	display:block;
+    position:absolute;
 	padding-left:30px; 
 	text-align:left; 
 	width:160px;
