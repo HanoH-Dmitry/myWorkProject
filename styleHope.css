@@ -80,7 +80,7 @@
 
 /** Основная навигация **/
 
-ul {
+.ula {
     list-style: none; /*убираем маркеры списка*/
     margin: 0; /*убираем отступы*/
     padding-left: 0; /*убираем отступы*/
@@ -88,7 +88,7 @@ ul {
     background:#819A32; /*добавляем фон всему меню*/
     height: 50px; /*задаем высоту*/
   }
-  a {
+  .aref {
     text-decoration: none; /*убираем подчеркивание текста ссылок*/
     background:#819A32; /*добавляем фон к пункту меню*/
     color:#fff; /*меняем цвет ссылок*/
@@ -101,26 +101,26 @@ ul {
     -o-transition: all 0.3s 0.01s ease;
     -webkit-transition: all 0.3s 0.01s ease;
   }
-  a:hover {
+  .aref:hover {
     background:#D43737;/*добавляем эффект при наведении*/
   }
-  li {
+  .lim {
     float:left; /*Размещаем список горизонтально для реализации меню*/
     position:relative; /*задаем позицию для позиционирования*/
   }
        
   /*Стили для скрытого выпадающего меню*/
-  li > ul {
+  .lim > ul {
     position:absolute;
     top:25px;
     display:none;   
   }
        
   /*Делаем скрытую часть видимой*/
-  li:hover > ul {
+  .lim:hover > ul {
     display:block; 
     width:250px;  /*Задаем ширину выпадающего меню*/      
   }
-  li:hover > ul > li {
+  .lim:hover > ul > li {
     float:none; /*Убираем горизонтальное позиционирование*/
   }
