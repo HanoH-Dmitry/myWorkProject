@@ -106,7 +106,7 @@
 }
 
 .dropdown2 {
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 /* Выпадающее содержимое (по умолчанию скрыто) */
