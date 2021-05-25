@@ -1,49 +1,65 @@
 /** Основная навигация **/
 
-.ula {
-    list-style: none; /*убираем маркеры списка*/
-    margin: 0; /*убираем отступы*/
-    padding-left: 0; /*убираем отступы*/
-    margin-top:25px; /*делаем отступ сверху*/
-    background:#15b622; /*добавляем фон всему меню*/
-    height: 50px; /*задаем высоту*/
-  }
-  .aref {
-    text-decoration: none; /*убираем подчеркивание текста ссылок*/
-    background:#15b622; /*добавляем фон к пункту меню*/
-    color:#fff; /*меняем цвет ссылок*/
-    padding:0px 15px; /*добавляем отступ*/
-    font-family: arial; /*меняем шрифт*/
-    line-height:50px; /*ровняем меню по вертикали*/
-    display: block; 
-    border-right: 1px solid #0e3309; /*добавляем бордюр справа*/
-    -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
-    -o-transition: all 0.3s 0.01s ease;
-    -webkit-transition: all 0.3s 0.01s ease;
-  }
-  .aref:hover {
-    background:#cefc02;/*добавляем эффект при наведении*/
-  }
-  .lim {
-    float:left; /*Размещаем список горизонтально для реализации меню*/
-    position:relative; /*задаем позицию для позиционирования*/
-  }
-       
-  /*Стили для скрытого выпадающего меню*/
-  .lim > ul {
-    position:relative;
-    top:25px;
-    display:none;   
-  }
-       
-  /*Делаем скрытую часть видимой*/
-  .lim:hover > ul {
-    display:block; 
-    width:150px;  /*Задаем ширину выпадающего меню*/      
-  }
-  .lim:hover > ul > li {
-    float:none; /*Убираем горизонтальное позиционирование*/
-  }
+body {
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+     }
+ 
+     .menu-wrap {
+	background-color:#53bd84; 
+	height:50px; 
+	line-height:50px; 
+	position:relative;
+	width:770px;
+	margin:auto;
+	margin-top:80px;
+     }
+ 
+     .menu-wrap ul {
+	list-style:none;
+     }
+ 
+     .menu-wrap ul li a {
+ 	float:left; 
+	width:150px; 
+	display:block; 
+	text-align:center; 
+	color:#FFF; 
+	text-decoration:none; 
+	text-transform:uppercase;
+     }
+ 
+     .menu-wrap ul li a:hover {
+	background-color:#666; 
+	display:block;
+     }
+ 
+     .menu-wrap ul li:hover ul {
+	display:block;
+     }
+ 
+     .menu-wrap ul ul {
+	display:none; 
+	list-style:none; 
+	position:absolute; 
+	background-color:#53bd84;
+	left:300px; 
+	top:50px; 
+	width:190px;
+     }
+ 
+     .menu-wrap ul ul li a {
+	float:none; 
+	display:block; 
+	padding-left:30px; 
+	text-align:left; 
+	width:160px;
+     }
+ 
+     .menu-wrap ul ul li a:hover {
+	color:#fff;
+      }
 
 
 #tabs {
