@@ -1,12 +1,12 @@
 /** Основная навигация **/
 
 body {
-	background-color:#fff;
+	background-color:#ccc;
 	font-family:Arial, Helvetica, sans-serif;
-	color:#FFF;
-     }
+	color:rgba(49, 49, 49, 0.911);
+}
  
-     .menu-wrap {
+.menu-wrap {
 	background-color:#53bd84; 
 	height:50px; 
 	line-height:50px; 
@@ -14,13 +14,13 @@ body {
 	width:770px;
 	margin:auto;
 	margin-top:80px;
-     }
+}
  
-     .menu-wrap ul {
+.menu-wrap ul {
 	list-style:none;
-     }
+}
  
-     .menu-wrap ul li a {
+.menu-wrap ul li a {
  	float:left; 
 	width:150px; 
 	display:block; 
@@ -28,18 +28,18 @@ body {
 	color:#FFF; 
 	text-decoration:none; 
 	text-transform:uppercase;
-     }
+}
  
-     .menu-wrap ul li a:hover {
+.menu-wrap ul li a:hover {
 	background-color:#666; 
 	display:block;
-     }
+}
  
-     .menu-wrap ul li:hover ul {
+.menu-wrap ul li:hover ul {
 	display:block;
-     }
+}
  
-     .menu-wrap ul ul {
+.menu-wrap ul ul {
 	display:none; 
 	list-style:none; 
 	position:absolute; 
@@ -47,19 +47,19 @@ body {
 	left:300px; 
 	top:50px; 
 	width:190px;
-     }
+}
  
-     .menu-wrap ul ul li a {
+.menu-wrap ul ul li a {
 	float:none; 
 	display:block; 
 	padding-left:30px; 
 	text-align:left; 
 	width:160px;
-     }
+}
  
-     .menu-wrap ul ul li a:hover {
+.menu-wrap ul ul li a:hover {
 	color:#fff;
-      }
+}
 
 
 #tabs {
