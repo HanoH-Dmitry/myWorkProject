@@ -28,6 +28,30 @@
           <a href="#">44 Хоста</a>
         </div>
       </div>
+
+    
+              /* Меню навигации */
+
+        /* При нажатии на кнопку, происходит переключение между скрытием и отображением раскрывающегося содержимого */
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Закрытие раскрывающегося списока, если щёлкнуть за его пределами
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn, .dropbtn2')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content, dropdown-content2");
+                var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+            }
+        }
     -->
     <ul class="ula">
         <li class="lim"><a href="#" class="aref">GET</a></li>
@@ -128,29 +152,6 @@
     </div>
 
     <script>
-
-        /* Меню навигации */
-
-        /* При нажатии на кнопку, происходит переключение между скрытием и отображением раскрывающегося содержимого */
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Закрытие раскрывающегося списока, если щёлкнуть за его пределами
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn, .dropbtn2')) {
-
-                var dropdowns = document.getElementsByClassName("dropdown-content, dropdown-content2");
-                var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-            }
-        }
 
         /* Боковое меню (табы) */
 
