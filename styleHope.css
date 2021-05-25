@@ -42,11 +42,11 @@ body {
 .menu-wrap ul ul {
 	display:none; 
 	list-style:none; 
-	position:fixed; 
+	position:absolute; 
 	background-color:#53bd84;
 	left:300px; 
 	top:50px; 
-	width:150px;
+	width:170px;
 }
  
 .menu-wrap ul ul li a {
