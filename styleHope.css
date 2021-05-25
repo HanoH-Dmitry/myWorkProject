@@ -32,7 +32,7 @@ body {
  
 .menu-wrap ul li a:hover {
 	background-color:#666;
-    width:120px;
+    width:150px;
 	display:block;
 }
  
@@ -43,7 +43,7 @@ body {
 .menu-wrap ul ul {
 	display:none; 
 	list-style:none; 
-	position:absolute; 
+	position:relative; 
 	background-color:#53bd84;
 	left:300px; 
 	top:50px; 
