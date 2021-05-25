@@ -43,7 +43,7 @@ body {
 .menu-wrap ul ul {
 	display:none; 
 	list-style:none; 
-	position:absolute; 
+	position:fixed; 
 	background-color:#53bd84;
 	left:300px; 
 	top:50px; 
@@ -53,7 +53,6 @@ body {
 .menu-wrap ul ul li a {
 	float:none; 
 	display:block;
-    position:absolute;
 	padding-left:30px; 
 	text-align:left; 
 	width:160px;
