@@ -10,7 +10,7 @@ body {
 	background-color:#53bd84; 
 	height:50px; 
 	line-height:50px; 
-	position:relative;
+	position:absolute;
 	width:530px;
 	margin:auto;
 	margin-top:80px;
@@ -42,7 +42,8 @@ body {
  
 .menu-wrap ul ul {
 	display:none; 
-	list-style:none;
+	list-style:none; 
+	position:relative; 
 	background-color:#53bd84;
 	left:300px; 
 	top:50px; 
