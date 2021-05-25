@@ -22,7 +22,7 @@ body {
  
 .menu-wrap ul li a {
  	float:left; 
-	width:150px; 
+	width:130px; 
 	display:block; 
 	text-align:center; 
 	color:#FFF; 
@@ -42,7 +42,7 @@ body {
 .menu-wrap ul ul {
 	display:none; 
 	list-style:none; 
-	position:absolute; 
+	position:sticky; 
 	background-color:#53bd84;
 	left:300px; 
 	top:50px; 
