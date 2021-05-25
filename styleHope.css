@@ -31,7 +31,7 @@
        
   /*Стили для скрытого выпадающего меню*/
   .lim > ul {
-    position:absolute;
+    position:fixed;
     top:25px;
     display:none;   
   }
@@ -39,7 +39,7 @@
   /*Делаем скрытую часть видимой*/
   .lim:hover > ul {
     display:block; 
-    width:auto;  /*Задаем ширину выпадающего меню*/      
+    width:25px;  /*Задаем ширину выпадающего меню*/      
   }
   .lim:hover > ul > li {
     float:none; /*Убираем горизонтальное позиционирование*/
