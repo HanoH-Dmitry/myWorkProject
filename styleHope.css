@@ -32,7 +32,7 @@ body {
  
 .menu-wrap ul li a:hover {
 	background-color:#666;
-    width:auto;
+    width:120px;
 	display:block;
 }
  
