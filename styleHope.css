@@ -31,7 +31,8 @@ body {
 }
  
 .menu-wrap ul li a:hover {
-	background-color:#666; 
+	background-color:#666;
+    width:auto;
 	display:block;
 }
  
