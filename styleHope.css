@@ -12,6 +12,8 @@
     list-style: none;
     background: #00ad1c;
     position: relative;
+    border-width: 0 0 0 2px;
+    border-color: #19383a;
 }
 
 /** Стилизируем ссылки **/
