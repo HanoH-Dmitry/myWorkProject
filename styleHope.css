@@ -3,8 +3,9 @@
 .menu {
     display: flex;
     justify-content: center;
-    border-width: 0 0 0 2px;
-    border-color: #19383a;
+    border: 5px solid #19383a;
+    border-right: #19383a;
+
 }
 
 /** Элементы меню **/
