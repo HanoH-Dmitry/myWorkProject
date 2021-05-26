@@ -10,7 +10,7 @@
 .menu li {
     width: 150px;
     list-style: none;
-    background: rgb(53, 199, 97);
+    background: #00ad1c;
     position: relative;
 }
 
@@ -29,7 +29,7 @@
 /* Стиль при наведении на пункты меню */
 
 .menu a:hover {
-    background: rgb(4, 90, 37);
+    background: #19383a;
 }
 
 /* Стиль для вложенных пунктов меню */
