@@ -3,8 +3,7 @@
 .menu {
     display: flex;
     justify-content: center;
-    border: 5px solid #19383a;
-    border-right: #19383a;
+    border-right: 5px solid #19383a;
 
 }
 
