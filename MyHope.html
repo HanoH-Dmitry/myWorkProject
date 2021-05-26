@@ -9,80 +9,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <!--
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">GET</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#">1 Хост</a>
-          <a href="#">2 Хоста</a>
-          <a href="#">3 Хоста</a>
-          <a href="#">4 Хоста</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">POST</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#">11 Хост</a>
-          <a href="#">22 Хоста</a>
-          <a href="#">33 Хоста</a>
-          <a href="#">44 Хоста</a>
-        </div>
-      </div>
-
-    
-              /* Меню навигации */
-
-        /* При нажатии на кнопку, происходит переключение между скрытием и отображением раскрывающегося содержимого */
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Закрытие раскрывающегося списока, если щёлкнуть за его пределами
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn, .dropbtn2')) {
-
-                var dropdowns = document.getElementsByClassName("dropdown-content, dropdown-content2");
-                var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-            }
-        }
-    -->
-    
-        <ul class="menu">
-            <li><a href="#">GET</a>
-                <ul>
-                    <li><a href="#">1 Хост</a></li>
-                    <li><a href="#">2 Хоста</a></li>
-                    <li><a href="#">3 Хоста</a></li>
-                    <li><a href="#">4 Хоста</a></li>
-                </ul>
-            </li>
-            <li><a href="#">POST</a>
-                <ul>
-                    <li><a href="#">5 Хост</a></li>
-                    <li><a href="#">6 Хоста</a></li>
-                    <li><a href="#">7 Хоста</a></li>
-                    <li><a href="#">8 Хоста</a></li>
-                </ul>
-            </li>
-            <li><a href="#">PGET</a>
-                <ul>
-                    <li><a href="#">9 Хост</a></li>
-                    <li><a href="#">10 Хоста</a></li>
-                    <li><a href="#">11 Хоста</a></li>
-                    <li><a href="#">12 Хоста</a></li>
-                </ul>
-            </li>
-        </ul>
+    <!-- Основное меню -->
+    <ul class="menu">
+        <li><a href="#">GET</a>
+            <ul>
+                <li><a href="#">1 Хост</a></li>
+                <li><a href="#">2 Хоста</a></li>
+                <li><a href="#">3 Хоста</a></li>
+                <li><a href="#">4 Хоста</a></li>
+            </ul>
+        </li>
+        <li><a href="#">POST</a>
+            <ul>
+                <li><a href="#">5 Хост</a></li>
+                <li><a href="#">6 Хоста</a></li>
+                <li><a href="#">7 Хоста</a></li>
+                <li><a href="#">8 Хоста</a></li>
+            </ul>
+        </li>
+        <li><a href="#">PGET</a>
+            <ul>
+                <li><a href="#">9 Хост</a></li>
+                <li><a href="#">10 Хоста</a></li>
+                <li><a href="#">11 Хоста</a></li>
+                <li><a href="#">12 Хоста</a></li>
+            </ul>
+        </li>
+    </ul>
     
     <div id="tabs">
-        <!-- Кнопки -->
+        <!-- Кнопки (бокового меню) -->
         <ul class="tabs-nav">
             <li><a href="#tab-1">Activity_sync</a></li>
             <li><a href="#tab-2">Ams_sync</a></li>
@@ -108,10 +64,10 @@
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
             </div>
             <div class="tabs-item" id="tab-2">
-                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & <br> curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
             </div>
             <div class="tabs-item" id="tab-3">
-                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & <br> curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & <br> curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
             </div>	
             <div class="tabs-item" id="tab-4">
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
@@ -154,7 +110,7 @@
             </div>
         </div>
     </div>
-    
+
     <script>
 
         /* Боковое меню (табы) */
