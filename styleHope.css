@@ -2,6 +2,7 @@
 
 .menu {
     display: flex;
+    justify-content: center;
 }
 
 /** Элементы меню **/
