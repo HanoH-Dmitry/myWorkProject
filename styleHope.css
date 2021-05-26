@@ -2,6 +2,7 @@
 
 .menu {
     display: flex;
+    position: absolute;
 }
 
 /** Элементы меню **/
