@@ -2,7 +2,7 @@
 
 .menu {
     display: flex;
-    position: absolute;
+    position: relative;
 }
 
 /** Элементы меню **/
@@ -47,6 +47,8 @@
 .menu li:hover ul {
     display: block;
 }
+
+/* Боковое меню */
 
 #tabs {
 	margin: 10px 0;
