@@ -1,67 +1,51 @@
 /** Основная навигация **/
 
-body {
-	background-color:#fbfbfb;
-	font-family:Arial, Helvetica, sans-serif;
-	color:rgba(49, 49, 49, 0.911);
-}
- 
-.menu-wrap {
-	background-color:#53bd84; 
-	height:50px; 
-	line-height:50px; 
-	position:relative;
-	width:530px;
-	margin:auto;
-	margin-top:80px;
-}
- 
-.menu-wrap ul {
-	list-style:none;
-}
- 
-.menu-wrap ul li a {
- 	float:left; 
-	width:130px; 
-	display:block; 
-	text-align:center; 
-	color:#FFF; 
-	text-decoration:none; 
-	text-transform:uppercase;
-}
- 
-.menu-wrap ul li a:hover {
-	background-color:#666;
-    width:150px;
-	display:block;
-}
- 
-.menu-wrap ul li:hover ul {
-	display:block;
-}
- 
-.menu-wrap ul ul {
-	display:none; 
-	list-style:none; 
-	position:absolute; 
-	background-color:#53bd84;
-	left:300px; 
-	top:50px; 
-	width:170px;
-}
- 
-.menu-wrap ul ul li a {
-	float:none; 
-	display:block;
-	padding-left:30px; 
-	text-align:left; 
-	width:160px;
-}
- 
-.menu-wrap ul ul li a:hover {
-	color:#fff;
+.menu {
+    display: flex;
 }
 
+/** Элементы меню **/
+
+.menu li {
+    width: 150px;
+    list-style: none;
+    background: rgb(176, 240, 195);
+    position: relative;
+}
+
+/** Стилизируем ссылки **/
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+/* Стиль при наведении на пункты меню */
+
+.menu a:hover {
+    background: rgb(26, 180, 85);
+}
+
+/* Стиль для вложенных пунктов меню */
+
+.menu ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0;
+}
+
+/* Появление вложенных элементов при наведении на родительский */
+
+.menu li:hover ul {
+    display: block;
+}
 
 #tabs {
 	margin: 10px 0;
