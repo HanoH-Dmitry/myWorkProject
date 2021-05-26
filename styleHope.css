@@ -3,8 +3,6 @@
 .menu {
     display: flex;
     justify-content: center;
-    border-right: 5px solid #19383a;
-
 }
 
 /** Элементы меню **/
@@ -14,6 +12,7 @@
     list-style: none;
     background: #00ad1c;
     position: relative;
+    border-right: 5px solid #19383a;
 }
 
 /** Стилизируем ссылки **/
