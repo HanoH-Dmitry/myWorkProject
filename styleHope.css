@@ -1,3 +1,31 @@
+html, body {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #222;
+}
+
+html.dark, .dark body {
+    font-size: 18px;
+    font-family: sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #f1f1f1;
+    padding: 30px;
+}
+
+.dark .container {
+    background: #3c3c3c;
+}
+
+.dark a {
+    color: #fff;
+}
+
 /** Основная навигация **/
 
 .menu {
