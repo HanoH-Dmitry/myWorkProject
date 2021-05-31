@@ -52,6 +52,7 @@ html.dark, .dark body {
 }
 
 /** Стилизируем ссылки **/
+
 .menu a {
     color: #fff;
     text-decoration: none;
@@ -141,7 +142,7 @@ html.dark, .dark body {
 }
 
 .tabs-nav li:last-child a {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #000;
 	border-radius: 0 0 0 5px; 
 }
 
