@@ -4,10 +4,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CopyPast</title>
     <link rel="stylesheet" href="styleHope.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Day/Night</h1>
+            <div class="section gallery">
+                <ul>
+                    <li>
+                        <a href="#" class="themetoggle">Toggle theme 
+                            <span class="material-icons">wb_sunny</span>
+                        </a>
+                    </li>
+                </ul>
+    </div>
     <!-- Основное меню -->
     <ul class="menu">
         <li><a href="#">GET</a>
@@ -170,6 +182,34 @@
            document.execCommand("copy");
 
         });
+
+        // День/Ночь
+
+        document.querySelector('.themetoggle').addEventListener('click', (event) => {
+            event.preventDefault();
+            if (localStorage.getItem('theme') === 'dark') {
+                localStorage.removeItem('theme');
+            }
+            else {
+                localStorage.setItem('theme', 'dark')
+            }
+            addDarkClassToHTML()
+        });
+
+        function addDarkClassToHTML() {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.querySelector('html').classList.add('dark');
+                    document.querySelector('.themetoggle span').textContent = 'dark_mode';
+                }
+                else {
+                    document.querySelector('html').classList.remove('dark');
+                    document.querySelector('.themetoggle span').textContent = 'wb_sunny';
+                }
+            } catch (err) { }
+        }
+
+        addDarkClassToHTML();
 
     </script>
 </body>

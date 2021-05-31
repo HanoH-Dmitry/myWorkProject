@@ -141,3 +141,30 @@
 	border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
+
+/* Переключатель темы */
+
+span.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;  
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Поддержка всех браузеров WebKit */
+    -webkit-font-smoothing: antialiased;
+    /* Поддержка Safari и Chrome */
+    text-rendering: optimizeLegibility;
+  
+    /* Поддержка Firefox */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Поддержка IE */
+    font-feature-settings: 'liga';
+}
