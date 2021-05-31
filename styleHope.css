@@ -43,6 +43,14 @@ html.dark, .dark body {
     border-right: 3px solid #fff;
 }
 
+.dark .menu li {
+    width: 150px;
+    list-style: none;
+    background: #19383a;
+    position: relative;
+    border-right: 3px solid #3c3c3c;
+}
+
 /** Стилизируем ссылки **/
 .menu a {
     color: #fff;
@@ -59,6 +67,10 @@ html.dark, .dark body {
 
 .menu a:hover {
     background: #19383a;
+}
+
+.dark .menu a:hover {
+    background: #00ad1c;
 }
 
 /* Стиль для вложенных пунктов меню */
