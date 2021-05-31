@@ -149,7 +149,7 @@ html.dark, .dark body {
 }
 
 .tabs-nav a.active {
-	border-right: 1px solid #fff;
+	border-right: 1px solid #ccc;
 	background: #fff;
 	color: #000;
 } 
