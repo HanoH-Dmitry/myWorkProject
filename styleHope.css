@@ -16,10 +16,14 @@ html.dark, .dark body {
     margin: 30px auto;
     background: #f1f1f1;
     padding: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 .dark .container {
     background: #3c3c3c;
+    align-items: center;
+    justify-content: center;
 }
 
 a {
@@ -191,7 +195,7 @@ a {
 }
 
 .dark .tabs-items {
-	margin-left: 149px;
+	margin-left: auto;
 	background: #222;
 }
 
