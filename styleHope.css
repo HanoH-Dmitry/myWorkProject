@@ -142,7 +142,22 @@ a {
 	font-size: 16px;
 	text-decoration: none;
 	color: #999;
-}		
+}
+
+.dark .tabs-nav a {
+	display: block;
+	padding: 10px 20px;
+	width: 100%;
+	box-sizing: border-box;
+	border-top: 1px solid #fff;  
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+	background: #3c3c3c; 
+	font-size: 16px;
+	text-decoration: none;
+	color: #fbfbfb;
+}
 
 .tabs-nav li:first-child a {
 	border-radius: 5px 0 0 0; 
