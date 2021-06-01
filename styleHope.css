@@ -208,6 +208,7 @@ a {
 	justify-content: space-between;
 	align-items: flex-start;
 	align-content: flex-end;
+    width: auto;
 }
 
 .tabs-flex-block {
