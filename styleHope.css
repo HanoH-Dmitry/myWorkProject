@@ -195,6 +195,7 @@ a {
 }
 
 .tabs-item {
+    display: flex;
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 0 5px 5px 0;	
