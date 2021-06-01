@@ -186,12 +186,10 @@ a {
 }
 
 .tabs-items {
-	margin-left: auto;
 	background: #fff;
 }
 
 .dark .tabs-items {
-	margin-left: auto;
 	background: #222;
 }
 
