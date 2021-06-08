@@ -56,6 +56,14 @@ table, td, tr {
     padding: 5px;
 }
 
+table.dark, td.dark, tr.dark {
+    border: 1px solid #fff;
+    text-align: center;
+    color: #999;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
 th {
     border: 1px solid #3c3c3c;
     text-align: center;
