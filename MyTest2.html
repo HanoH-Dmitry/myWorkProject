@@ -216,23 +216,23 @@
     </script>-->
     <script>
         // Добавить класс к каждому элементу таблицы (td)
-        //var myTableApp = document.getElementsByTagName("TD");
-        //var i;
-        //or (i = 0; i < myTableApp.length; i++) {
-        //  var span = document.createElement("SPAN");
-        //  myTableApp[i].appendChild(span);
-        //}
+        var myTableApp = document.getElementsByTagName("TD");
+        var i;
+            or (i = 0; i < myTableApp.length; i++) {
+            var span = document.createElement("SPAN");
+            myTableApp[i].appendChild(span);
+        }
 
         // Добавить символ "отмечен" при нажатии на элемент таблицы
-        //var list = document.querySelector('table');
-        //list.addEventListener('click', function(ev) {
-        //  if (ev.target.tagName === 'TD') {
-        //    ev.target.classList.toggle('checkedApp');
-        //  }
-        //  else if (ev.target.tagName === 'TH') {
-        //    ev.target.classList.toggle('checkedHost');
-        //  }
-        //}, false);
+        var list = document.querySelector('table');
+        list.addEventListener('click', function(ev) {
+          if (ev.target.tagName === 'TD') {
+            ev.target.classList.toggle('checkedApp');
+          }
+          else if (ev.target.tagName === 'TH') {
+            ev.target.classList.toggle('checkedHost');
+          }
+        }, false)
 
         // День/Ночь
 
