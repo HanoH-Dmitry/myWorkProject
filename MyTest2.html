@@ -236,9 +236,9 @@
         }, false)
 
         // Тестируем вывод скрипта
-        let beeCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet .myTableApp');
+        let beeCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet .checkedHost, .checkedApp');
             beeCollection.forEach(item => item.addEventListener('click', function(){
-                item.style.animation = "fade .5s ease-out forwards"
+                console.log("Normal")
                 })
             );
 
