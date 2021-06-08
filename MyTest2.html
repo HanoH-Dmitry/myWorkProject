@@ -214,45 +214,6 @@
         //  }
         //}, false);
 
-        // Добавляем ползунок для хостов
-
-        $(function () {
-            $('.switch-btn').click(function () {
-                $(this).toggleClass('switch-on');
-                    if ($(this).hasClass('switch-on')) {
-                        $(this).trigger('on.switch');
-                    } else {
-                        $(this).trigger('off.switch');
-                    }
-            });
-            $('.switch-btn').on('on.switch', function () {
-                $($(this).attr('data-id')).removeClass('bl-hide');
-            });
-            $('.switch-btn').on('off.switch', function () {
-                $($(this).attr('data-id')).addClass('bl-hide');
-            });
-        });
-
-        // Добавляем тумблер
-
-        $(window).keyup(function(e){
-	    var target = $('.checkbox-green input:focus');
-	        if (e.keyCode == 9 && $(target).length){
-		        $(target).parent().addClass('focused');
-	        }
-        });
- 
-        $('.checkbox-green input').focusout(function(){
-	        $(this).parent().removeClass('focused');
-        });
-
-        // Автовысота для текстового поля
-
-        $('#textarea').on('input', function(){
-	        this.style.height = '1px';
-	        this.style.height = (this.scrollHeight + 6) + 'px'; 
-        });
-
         // День/Ночь
 
         document.querySelector('.themetoggle').addEventListener('click', (event) => {
