@@ -44,10 +44,6 @@ p {
     color: #fff;
 }
 
-table {
-    padding: auto;
-}
-
 table, td, tr {
     border: 1px solid #3c3c3c;
     text-align: center;
