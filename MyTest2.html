@@ -218,7 +218,7 @@
         // Добавить класс к каждому элементу таблицы (td)
         var myTableApp = document.getElementsByTagName("TD");
         var i;
-            or (i = 0; i < myTableApp.length; i++) {
+            for (i = 0; i < myTableApp.length; i++) {
             var span = document.createElement("SPAN");
             myTableApp[i].appendChild(span);
         }
