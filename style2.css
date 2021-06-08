@@ -32,6 +32,80 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #222;
+}
+
+.dark p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+table, td {
+    border: 1px solid #222;
+    text-align: center;
+    color: #222;
+    border-collapse: collapse;
+    padding: auto;
+}
+
+.dark table, td {
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    border-collapse: collapse;
+    padding: auto;
+}
+
+th {
+    border: 1px solid #222;
+    text-align: center;
+    color: #222;
+    border-collapse: collapse;
+    padding: auto;
+}
+
+.dark th {
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    border-collapse: collapse;
+    padding: auto;
+}
+
+.checkedApp {
+    text-align: center;
+    color: rgb(252, 253, 252);
+    background-color: rgb(219, 24, 193);
+    padding: auto;
+}
+
+.checkedHost {
+    text-align: center;
+    color: rgb(252, 253, 252);
+    background-color: rgb(200, 219, 24);
+    padding: auto;
+}
+
+.colAppWeb {
+    text-align: center;
+    color: rgb(252, 253, 252);
+    background-color: rgb(19, 182, 68);
+}
+
+.btn {
+    background-color: rgb(36, 43, 43);
+    color: rgb(94, 248, 4);
+}
+
+.active {
+    background-color: rgb(248, 4, 167);
+    color: rgb(36, 43, 43);
+}
+
 /** Основная навигация **/
 
 .menu {
@@ -272,77 +346,3 @@ span.material-icons {
     #1f7639 - green
     #8ec14b - lightGreen3
 */
-
-p {
-    font-size: 18px;
-    font-family: sans-serif;
-    color: #222;
-}
-
-.dark p {
-    font-size: 18px;
-    font-family: sans-serif;
-    color: #fff;
-}
-
-table, td {
-    border: 1px solid #222;
-    text-align: center;
-    color: #222;
-    border-collapse: collapse;
-    padding: auto;
-}
-
-.dark table, td {
-    border: 1px solid #fff;
-    text-align: center;
-    color: #fff;
-    border-collapse: collapse;
-    padding: auto;
-}
-
-th {
-    border: 1px solid #222;
-    text-align: center;
-    color: #222;
-    border-collapse: collapse;
-    padding: auto;
-}
-
-.dark th {
-    border: 1px solid #fff;
-    text-align: center;
-    color: #fff;
-    border-collapse: collapse;
-    padding: auto;
-}
-
-.checkedApp {
-    text-align: center;
-    color: rgb(252, 253, 252);
-    background-color: rgb(219, 24, 193);
-    padding: auto;
-}
-
-.checkedHost {
-    text-align: center;
-    color: rgb(252, 253, 252);
-    background-color: rgb(200, 219, 24);
-    padding: auto;
-}
-
-.colAppWeb {
-    text-align: center;
-    color: rgb(252, 253, 252);
-    background-color: rgb(19, 182, 68);
-}
-
-.btn {
-    background-color: rgb(36, 43, 43);
-    color: rgb(94, 248, 4);
-}
-
-.active {
-    background-color: rgb(248, 4, 167);
-    color: rgb(36, 43, 43);
-}
