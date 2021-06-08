@@ -97,7 +97,7 @@ a {
 }
 
 /* Боковое меню */
-
+/*
 #tabs {
 	margin: 10px 0;
 	overflow: hidden;
@@ -232,7 +232,7 @@ a {
     align-items: center;
     justify-content: center;
 }
-
+*/
 /* Переключатель темы */
 
 span.material-icons {
@@ -273,30 +273,46 @@ span.material-icons {
     #8ec14b - lightGreen3
 */
 
-/*
-h1 {
-    color: rgb(25, 151, 46);
-    text-align: center;
+p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #222;
 }
 
-p {
-    color: rgb(94, 248, 4);
-    font-family: verdana;
-    font-size: 20px;
+.dark p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
 }
 
 table, td {
-    border: 1px solid rgb(94, 248, 4);
+    border: 1px solid #222;
     text-align: center;
-    color: rgb(94, 248, 4);
+    color: #222;
+    border-collapse: collapse;
+    padding: auto;
+}
+
+.dark table, td {
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
     border-collapse: collapse;
     padding: auto;
 }
 
 th {
-    border: 1px solid rgb(94, 248, 4);
+    border: 1px solid #222;
     text-align: center;
-    color: rgba(225, 240, 17, 0.932);
+    color: #222;
+    border-collapse: collapse;
+    padding: auto;
+}
+
+.dark th {
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
     border-collapse: collapse;
     padding: auto;
 }
@@ -330,5 +346,3 @@ th {
     background-color: rgb(248, 4, 167);
     color: rgb(36, 43, 43);
 }
-
-*/
