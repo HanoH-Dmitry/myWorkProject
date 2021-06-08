@@ -91,12 +91,14 @@ th {
 }
 
 .colAppWeb {
+    border: 1px solid #3c3c3c;
     text-align: center;
     color: #fff;
     background-color: #00ad1c;
 }
 
 .dark .colAppWeb {
+    border: 1px solid #fff;
     text-align: center;
     color: #fff;
     background-color: #19383a;
