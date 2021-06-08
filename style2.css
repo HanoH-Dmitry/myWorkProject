@@ -52,7 +52,7 @@ table, td, tr {
     padding: 5px;
 }
 
-table.dark, td.dark, tr.dark {
+table.dark, .dark td, .dark tr {
     border: 1px solid #fff;
     text-align: center;
     color: #999;
