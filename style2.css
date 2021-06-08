@@ -45,11 +45,11 @@ p {
 }
 
 table, td {
-    border: 1px solid #222;
+    border: 1px solid #3c3c3c;
     text-align: center;
     color: #999;
     border-collapse: collapse;
-    padding: 20px;
+    padding: 5px;
 }
 
 .dark table, td {
@@ -61,7 +61,7 @@ table, td {
 }
 
 th {
-    border: 1px solid #222;
+    border: 1px solid #3c3c3c;
     text-align: center;
     color: #222;
     border-collapse: collapse;
