@@ -79,7 +79,8 @@ th {
 .checkedApp {
     text-align: center;
     color: rgb(252, 253, 252);
-    font-style: italic bold;
+    font-style: italic;
+    font-weight: bold;
     background-color: #19383a;
     padding: auto;
 }
@@ -87,7 +88,8 @@ th {
 .dark .checkedApp {
     text-align: center;
     color: rgb(252, 253, 252);
-    font-style: italic bold;
+    font-style: italic;
+    font-weight: bold;
     background-color: #00ad1c;
     padding: auto;
 }
