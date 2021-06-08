@@ -52,14 +52,6 @@ table, td, tr {
     padding: 5px;
 }
 
-.dark table, td, tr {
-    border: 1px solid #fff;
-    text-align: center;
-    color: #fff;
-    border-collapse: collapse;
-    padding: 5px;
-}
-
 th {
     border: 1px solid #3c3c3c;
     text-align: center;
