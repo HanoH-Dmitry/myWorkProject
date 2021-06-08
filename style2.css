@@ -79,14 +79,32 @@ th {
 .checkedApp {
     text-align: center;
     color: rgb(252, 253, 252);
-    background-color: rgb(219, 24, 193);
+    font-style: italic bold;
+    background-color: #19383a;
+    padding: auto;
+}
+
+.dark .checkedApp {
+    text-align: center;
+    color: rgb(252, 253, 252);
+    font-style: italic bold;
+    background-color: #00ad1c;
     padding: auto;
 }
 
 .checkedHost {
     text-align: center;
-    color: rgb(252, 253, 252);
-    background-color: rgb(200, 219, 24);
+    color: #fff;
+    font-style: italic;
+    background-color: #00ad1c;
+    padding: auto;
+}
+
+.dark .checkedHost {
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+    background-color: #19383a;
     padding: auto;
 }
 
