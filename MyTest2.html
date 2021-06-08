@@ -9,6 +9,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="section gallery">
+            <ul>
+                <li style="list-style: none">
+                    <a href="#" class="themetoggle">Day/Night 
+                        <span class="material-icons">wb_sunny</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <table style="width:auto" id="myTableApp">
         <tr>
             <th colspan="3" class="colAppWeb">App</th>
@@ -241,6 +252,35 @@
 	        this.style.height = '1px';
 	        this.style.height = (this.scrollHeight + 6) + 'px'; 
         });
+
+        // День/Ночь
+
+        document.querySelector('.themetoggle').addEventListener('click', (event) => {
+            event.preventDefault();
+            if (localStorage.getItem('theme') === 'dark') {
+                localStorage.removeItem('theme');
+            }
+            else {
+                localStorage.setItem('theme', 'dark')
+            }
+            addDarkClassToHTML()
+        });
+
+        function addDarkClassToHTML() {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.querySelector('html').classList.add('dark');
+                    document.querySelector('.themetoggle span').textContent = 'dark_mode';
+                }
+                else {
+                    document.querySelector('html').classList.remove('dark');
+                    document.querySelector('.themetoggle span').textContent = 'wb_sunny';
+                }
+            } catch (err) { }
+        }
+
+        addDarkClassToHTML();
+        
     </script>   
 
 </body>
