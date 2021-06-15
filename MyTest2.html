@@ -243,7 +243,8 @@
         let curlsCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet');
             curlsCollection.forEach(item => item.addEventListener('click', function(tar){
                 for(var i=1; i<tar.length; i++){
-              tar.elements[i].checked = complete;
+                    tar.elements[i].checked = complete;
+                    console.log('Ну и чо?')
                 };
             }, false))
 
