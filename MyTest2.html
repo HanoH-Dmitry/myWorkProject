@@ -236,7 +236,7 @@
         }, true)
 
         // Тестируем вывод скрипта
-        let beeCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet');
+        let beeCollection = document.querySelectorAll('#mskIotApp01, .checkedHost, #ActivitySyncGet, .checkedApp');
             beeCollection.forEach(item => item.addEventListener('click', function(){
                 text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
                 })

@@ -220,3 +220,123 @@ document.body.addEventListener('click', e => {
       div.removeEventListener('click', foo, false);
     }
   </script>
+
+
+  /* Кнопка раскрывающегося списка */
+.dropbtn {
+    background-color: #202224e5;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Кнопка раскрывающегося списка при наведении и фокусе */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #5c5e5fd8;
+}
+
+/* Контейнер <div> - необходим для размещения раскрывающегося содержимого */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Выпадающее содержимое (по умолчанию скрыто) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cff8cb;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Ссылки внутри раскрывающегося списка */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Изменение цвета раскрывающихся ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Показать раскрывающееся меню (используется JS, чтобы добавить этот класс в контейнер .dropdown-content, когда нажимаем кнопку раскрывающегося списка) */
+.show {display:block;}
+
+
+Old menu
+
+body {
+	background-color:#fbfbfb;
+	font-family:Arial, Helvetica, sans-serif;
+	color:rgba(49, 49, 49, 0.911);
+}
+ 
+.menu-wrap {
+	background-color:#53bd84; 
+	height:50px; 
+	line-height:50px; 
+	position:relative;
+	width:530px;
+	margin:auto;
+	margin-top:80px;
+}
+ 
+.menu-wrap ul {
+	list-style:none;
+}
+ 
+.menu-wrap ul li a {
+ 	float:left; 
+	width:130px; 
+	display:block; 
+	text-align:center; 
+	color:#FFF; 
+	text-decoration:none; 
+	text-transform:uppercase;
+}
+ 
+.menu-wrap ul li a:hover {
+	background-color:#666;
+    width:150px;
+	display:block;
+}
+ 
+.menu-wrap ul li:hover ul {
+	display:block;
+}
+ 
+.menu-wrap ul ul {
+	display:none; 
+	list-style:none; 
+	position:absolute; 
+	background-color:#53bd84;
+	left:300px; 
+	top:50px; 
+	width:170px;
+}
+ 
+.menu-wrap ul ul li a {
+	float:none; 
+	display:block;
+	padding-left:30px; 
+	text-align:left; 
+	width:160px;
+}
+ 
+.menu-wrap ul ul li a:hover {
+	color:#fff;
+}
+
+
+
+// Тестируем вывод скрипта
+        let beeCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet, .checkedHost, .checkedApp');
+            beeCollection.forEach(item => item.addEventListener('click', function(){
+                console.log("Normal")
+                })
+            );
