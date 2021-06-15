@@ -125,8 +125,8 @@
             </tr>
         </table>
     </div>
-    <!--<textarea type="text" value="" id="text textarea" style="width: 320px; height: 300px; background-color: rgba(36, 43, 43); color:chartreuse"></textarea>
-    <div class="out">
+    <textarea type="text" value="" id="text textarea" style="width: 320px; height: 300px; background-color: #3c3c3c; color:#fff; float: right;"></textarea>
+    <!--<div class="out">
     </div>
     <script>
         function myFunction() {
@@ -236,9 +236,9 @@
         }, true)
 
         // Тестируем вывод скрипта
-        let beeCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet, .checkedHost, .checkedApp');
+        let beeCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet');
             beeCollection.forEach(item => item.addEventListener('click', function(){
-                console.log("Normal")
+                text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
                 })
             );
 
