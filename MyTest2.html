@@ -225,6 +225,9 @@
             myTableApp[i].appendChild(span);
         }
 
+    </script>-->
+    <script>
+
         // Добавить символ "отмечен" при нажатии на элемент таблицы
         var list = document.querySelector('table');
         list.addEventListener('click', function(ev) {
@@ -236,17 +239,14 @@
           }
         }, false)
 
-    </script>-->
-    <script>
-
         // Тестируем вывод скрипта
         let curlsCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet');
             curlsCollection.forEach(item => item.addEventListener('click', function(tar){
-                if (tar.item.tagName === 'th') {
-                    tar.target.classList.toggle('checkedHost');
+                if (tar.item.classList === 'checkedHost') {
+                    console.log('Выбран хост');
                 }
-                else (tar.item.tagName === 'td'); {
-                    tar.target.classList.toggle('checkedApp');
+                else (tar.item.classList === 'checkedApp'); {
+                    console.log('Выбран компонент');
                 }
             }, false))
 
