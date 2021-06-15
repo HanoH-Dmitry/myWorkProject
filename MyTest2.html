@@ -213,10 +213,11 @@
         ASG.addEventListener('click', foo1, false);
 
         function foo1() { console.log(target.classList); }
-    </script>-->
-    <script>
 
-        // Добавить класс к каждому элементу таблицы (td)
+
+        NiceWork
+
+                // Добавить класс к каждому элементу таблицы (td)
         var myTableApp = document.getElementsByTagName("TD");
         var i;
             for (i = 0; i < myTableApp.length; i++) {
@@ -233,17 +234,15 @@
           else if (ev.target.tagName === 'TH') {
             ev.target.classList.toggle('checkedHost');
           }
-        }, true)
+        }, false)
+
+    </script>-->
+    <script>
 
         // Тестируем вывод скрипта
-        let beeCollection = document.querySelectorAll('#mskIotApp01, .checkedHost, #ActivitySyncGet, .checkedApp');
-            beeCollection.forEach(item => item.addEventListener('click', function(){
-                if (target.classList.toggle('checkedHost' && 'checkedApp')) {
-                    text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
-                } else {
-                    target.classList.removeEventListener('checkedHost' && 'checkedApp', text.value, false);
-                }
-            
+        let curlsCollection = document.querySelectorAll('#mskIotApp01, .checkedHost, #ActivitySyncGet, .checkedApp');
+            curlsCollection.forEach(item => item.addEventListener('click', function(){
+                item.className = "checkedHost"       
                 })
             );
 

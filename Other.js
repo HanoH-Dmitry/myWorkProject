@@ -340,3 +340,15 @@ body {
                 console.log("Normal")
                 })
             );
+
+            // Тестируем вывод скрипта
+        let beeCollection = document.querySelectorAll('#mskIotApp01, .checkedHost, #ActivitySyncGet, .checkedApp');
+            beeCollection.forEach(item => item.addEventListener('click', function(){
+                if (target.classList.toggle('checkedHost' && 'checkedApp')) {
+                    text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
+                } else {
+                    target.classList.removeEventListener('checkedHost' && 'checkedApp', text.value, false);
+                }
+            
+                })
+            );
