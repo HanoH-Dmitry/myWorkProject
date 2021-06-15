@@ -243,10 +243,10 @@
         let curlsCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet');
             curlsCollection.forEach(item => item.addEventListener('click', function(tar){
                 if (tar.item.tagName === 'TH') {
-                    tar.target.classList.toggle('checkedHost')
+                    tar.target.classList.toggle('checkedHost');
                 }
                 else (tar.item.tagName === 'TD') {
-                    tar.target.classList.toggle('checkedApp')
+                    tar.target.classList.toggle('checkedApp');
                 }
             }, false));
 
