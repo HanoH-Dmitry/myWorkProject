@@ -242,10 +242,10 @@
         // Тестируем вывод скрипта
         let curlsCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet');
             curlsCollection.forEach(item => item.addEventListener('click', function(tar){
-                if (tar.item.classList.toggle === 'checkedHost') {
+                if (tar.item.target === '#mskIotApp01') {
                     console.log('Выбран хост');
                 }
-                else (tar.item.classList.toggle === 'checkedApp'); {
+                else (tar.item.target === '#ActivitySyncGet'); {
                     console.log('Выбран компонент');
                 }
             }, false))
