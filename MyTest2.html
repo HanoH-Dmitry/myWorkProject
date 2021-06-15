@@ -233,7 +233,7 @@
           else if (ev.target.tagName === 'TH') {
             ev.target.classList.toggle('checkedHost');
           }
-        }, false)
+        }, true)
 
         // Тестируем вывод скрипта
         let beeCollection = document.querySelectorAll('#mskIotApp01, #ActivitySyncGet, .checkedHost, .checkedApp');
