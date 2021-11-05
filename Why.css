@@ -24,12 +24,10 @@ html.dark, .dark body {
 
 a {
     color: #000;
-    text-decoration: none;
 }
 
 .dark a {
     color: #fff;
-    text-decoration: none;
 }
 
 /** Основная навигация **/
