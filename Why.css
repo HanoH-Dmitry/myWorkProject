@@ -12,8 +12,8 @@ html.dark, .dark body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 30px auto;
+    /*max-width: auto;*/
+    margin: 0px auto;
     background: #f1f1f1;
     padding: 30px;
 }
