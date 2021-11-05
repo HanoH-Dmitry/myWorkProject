@@ -35,6 +35,8 @@ a {
 /** Основная навигация **/
 
 .menu {
+    margin: 0px;
+    padding: 0px;
     display: flex;
     justify-content: center;
 }
