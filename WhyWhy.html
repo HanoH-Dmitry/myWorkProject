@@ -20,7 +20,7 @@
                     </li>
                 </ul>
     </div>
-    <!-- Основное меню 
+    <!-- Основное меню -->
     <ul class="menu">
         <li><a href="#">GET</a>
             <ul>
@@ -47,9 +47,9 @@
             </ul>
         </li>
     </ul>
-    -->
+    
     <div id="tabs">
-        <!-- Кнопки (бокового меню) -->
+        <!-- Кнопки (бокового меню)
         <ul class="tabs-nav">
             <li><a href="#tab-1">Расхождение персональных данных</a></li>
             <li><a href="#tab-2">Ams_sync</a></li>
@@ -68,8 +68,8 @@
             <li><a href="#tab-15">Reports</a></li>
             <li><a href="#tab-16">Xvlr_push</a></li>
         </ul>	
-        
-        <!-- Контент -->
+        -->
+        <!-- Контент 
         <div class="tabs-items" id="content">
             <div class="tabs-item tabs-flex" id="tab-1">
                 <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
@@ -121,69 +121,9 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
     <script>
-
-        /* Боковое меню (табы) */
-
-        $(function() {
-            var tab = $('#tabs .tabs-items > div'); 
-            tab.hide().filter(':first').show(); 
-            
-            // Клики по вкладкам
-            $('#tabs .tabs-nav a').click(function(){
-
-                tab.hide(); 
-                tab.filter(this.hash).show(); 
-                $('#tabs .tabs-nav a').removeClass('active');
-                $(this).addClass('active');
-                return false;
-
-            }).filter(':first').click();
-         
-            // Клики по якорным ссылкам
-            $('.tabs-target').click(function(){
-
-                $('#tabs .tabs-nav a[href=' + $(this).data('id')+ ']').click();
-
-            });
-        });
-
-        /* Скрипт для выделения и копирования*/
-
-        // Добавляем каждому div выделение текста
-
-        function selectText(elementId) {
-            var doc = document,
-                text = doc.getElementById(elementId), range, selection;
-    
-            if(doc.body.createTextRange) {
-    
-                range = document.body.createTextRange();
-                range.moveToElementText(text);
-                range.select();
-        
-            } else if(window.getSelection) {
-        
-                selection = window.getSelection();
-                range = document.createRange();
-                range.selectNodeContents(text);
-                selection.removeAllRanges();
-                selection.addRange(range);
-
-            }
-        }
-
-        $("#content").click(function() {
-    
-            selectText(this.id);
-
-        // Добавляем автокопирование текста при нажатии на div (выделенный текст)
-           document.execCommand("copy");
-
-        });
-
-        // День/Ночь
+         // День/Ночь
 
         document.querySelector('.themetoggle').addEventListener('click', (event) => {
             event.preventDefault();
