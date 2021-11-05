@@ -1,252 +1,216 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CopyPast</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyCurls</title>
+    <link rel="stylesheet" href="styleHope.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <table style="width:auto" id="myTableApp">
-        <tr>
-            <th colspan="3" class="colAppWeb">App</th>
-        <tr>
-            <th>HOSTs</th>
-            <th>GET</th>
-            <th>
-                <label class="checkbox-green">
-                    <input type="checkbox">
-                    <span class="checkbox-green-switch" data-label-on="PGet" data-label-off="PPost"></span>
-                </label>
-            </th>
-        </tr>
-        </tr>
-        <tr>
-            <th rowspan="2"><div class="switch-btn" id="mskIotApp01"></div>msk-iot-app01</th>
-            <td>Activity_sync</td>
-            <td>Activity_sync</td>
-        <tr>
-            <td>Ams_sync</td>
-            <td>Ams_sync</td>
-        </tr>
-        </tr>
-        <tr>
-            <th rowspan="2"><div class="switch-btn" id="mskIotApp01"></div>msk-iot-app02</th>
-            <td id="BackendGet">Backend</td>
-            <td id="BackendPost">Backend</td>
-        </tr>
-        <tr>
-            <td id="LimitMartGet">Limit_mart</td>
-            <td id="LimitMartPost">Limit_mart</td>
-        </tr>
-        <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app51" class="btn" name="mskIotApp51" OnClick="ClickFunction(this), App51();"></th>
-            <td id="MartSyncGet">Mart_sync</td>
-            <td id="MartSyncPost">Mart_sync</td>
-        </tr>
-        <tr>
-            <td id="NetworkEventsGet">Network_events</td>
-            <td id="NetworkEventsPost">Network_events</td>
-        </tr>
-        <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-app52" class="btn" name="mskIotApp52" OnClick="ClickFunction(this), App52();"></th>
-            <td id="NotificationGet">Notification</td>
-            <td id="NotificationPost">Notification</td>
-        </tr>
-        <tr>
-            <td id="OrdersExecutorGet">Orders_executor</td>
-            <td id="OrdersExecutorPost">Orders_executor</td>
-        </tr>
-        <tr>
-            <th colspan="3" class="colAppWeb">Web</th>
-        </tr>
-        <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-web01" class="btn" name="mskIotWeb01" OnClick="ClickFunction(this), Web01();"></th>
-            <td id="BirtGet">Birt</td>
-            <td id="BirtPost">Birt</td>
-        <tr>
-            <td id="ElasticsearchGet">Elacticsearch</td>
-            <td id="ElasticsearchPost">Elacticsearch</td>
-        </tr>
-        </tr>
-        <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-web02" class="btn" name="mskIotWeb02" OnClick="ClickFunction(this), Web02();"></th>
-            <td id="GeolocationGet">Geolocation</td>
-            <td id="GeolocationPost">Geolocation</td>
-        </tr>
-        <tr>
-            <td id="GuiAuthGet">Gui_auth</td>
-            <td id="GuiAuthPost">Gui_auth</td>
-        </tr>
-        <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-web51" class="btn" name="mskIotWeb51" OnClick="ClickFunction(this), Web51();"></th>
-            <td id="GuiBackendGet">Gui_backend</td>
-            <td id="GuiBackendPost">Gui_backend</td>
-        </tr>
-        <tr>
-            <td id="PushGet">Push</td>
-            <td id="PushPost">Push</td>
-        </tr>
-        <tr>
-            <th rowspan="2"><input type="button" value="msk-iot-web52" class="btn" name="mskIotWeb52" OnClick="ClickFunction(this), Web52();"></th>
-            <td id="ReportsGet">Reports</td>
-            <td id="ReportsPost">Reports</td>
-        </tr>
-        <tr>
-            <td id="XvlrPushGet">Xvlr_push</td>
-            <td id="XvlrPushPost">Xvlr_push</td>
-        </tr>
-    </table>
-    <textarea type="text" value="" id="text textarea" style="width: 320px; height: 300px; background-color: rgba(36, 43, 43); color:chartreuse"></textarea>
-    <div class="out">
+    <div class="container">
+            <div class="section gallery">
+                <ul>
+                    <li style="list-style: none">
+                        <a href="#" class="themetoggle">Day/Night 
+                            <span class="material-icons">wb_sunny</span>
+                        </a>
+                    </li>
+                </ul>
     </div>
-    <!--<script>
-        function myFunction() {
-        var checkBox = document.getElementById("myCheckGet, myCheckPost");
-        //var text = document.getElementById("text");
-        if (checkBox.checked == true){
-            text.style.display = "block";
-        } else {
-           text.style.display = "none";
-        }
-    }
-
-            var list = document.querySelector('input');
-        list.addEventListener('click', function (ev) {
-            if (ev.target.addEventListener === 'mskIotApp01') {
-            ev.target.classList.add('active');
-          }
-        }, false);
-
-                var btns = document.querySelectorAll('button')
-        // Проходим по массиву
-        btns.forEach(function (btn) {
-            // Вешаем событие клик
-            btn.addEventListener('click', function (e) {
-                console.log(e.target.classList);
-            })
-        })
-
-        // Добавляем визуализацию нажатой кнопки ***********
-
-        //element.addEventListener(event, handler[, options]);
-        //event
-        //Имя события, например "click".
-        //    handler
-        //Ссылка на функцию - обработчик.
-        //    options
-        //Для удаления обработчика следует использовать removeEventListener:
-
-        //element.removeEventListener(event, handler[, options]);
-
-        //button.addEventListener('click', function () {
-        //function one() {
-        //  mskIotApp01.classList.add("active");
-        //}
-        //mskIotApp01.addEventListener('click', one, false);
-        //mskIotApp01.removeEventListener('click', one, false);
-
-        //mskIotApp01 .addEventListener("click", myFoo)
-        //function myFoo ()
-        //{
-        //    alert("This click to button Host!");
-        //}
-        //ActivitySyncGet
-
-        //var button = document.getElementById('mskIotApp01');
-        //function foo() {
-        //  mskIotApp01.classList.add("active");
-        //  button.addEventListener('click', foo, true);
-        //}
-        //function foo() {
-        //  mskIotApp01.classList.add("btn");
-        //  button.removeEventListener('click', foo, true);
-        //}
-
-        // Добавляем логику по выбору хостов и компонент
-        //var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
-        //var i;
-        //for (i = 0; i < hostApp.length; i++) {
-            //var span = document.createElement("SPAN");
-            //hostApp[i].appendChild(span);
-        //}
-            //if (ev.target.getElementById === 'mskIotApp01') {
-            //    console.log('true')
-            //} else if (ev.target.getElementById === 'ActivitySyncGet') {
-            //    text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
-        //}
-
-        var App01 = document.getElementById('mskIotApp01');
-        App01.addEventListener('click', foo, false);
-
-        function foo() { console.log(target.classList); }
-
-        var ASG = document.getElementById('ActivitySyncGet');
-        ASG.addEventListener('click', foo1, false);
-
-        function foo1() { console.log(target.classList); }
-    </script>-->
+    <!-- Основное меню -->
+    <ul class="menu">
+        <li><a href="#">GET</a>
+            <ul>
+                <li><a href="MyHope.html">1 Хост</a></li>
+                <li><a href="#">2 Хоста</a></li>
+                <li><a href="MyHope3.html">3 Хоста</a></li>
+                <li><a href="MyHope4.html">4 Хоста</a></li>
+            </ul>
+        </li>
+        <li><a href="#">POST</a>
+            <ul>
+                <li><a href="MyHope5.html">1 Хост</a></li>
+                <li><a href="MyHope6.html">2 Хоста</a></li>
+                <li><a href="MyHope7.html">3 Хоста</a></li>
+                <li><a href="MyHope8.html">4 Хоста</a></li>
+            </ul>
+        </li>
+        <li><a href="#">PGET</a>
+            <ul>
+                <li><a href="MyHope9.html">1 Хост</a></li>
+                <li><a href="MyHope10.html">2 Хоста</a></li>
+                <li><a href="MyHope11.html">3 Хоста</a></li>
+                <li><a href="MyHope12.html">4 Хоста</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <div id="tabs">
+        <!-- Кнопки (бокового меню) -->
+        <ul class="tabs-nav">
+            <li><a href="#tab-1">Activity_sync</a></li>
+            <li><a href="#tab-2">Ams_sync</a></li>
+            <li><a href="#tab-3">Backend</a></li>
+            <li><a href="#tab-4">Limit_mart</a></li>
+            <li><a href="#tab-5">Mart_sync</a></li>
+            <li><a href="#tab-6">Network_events</a></li>
+            <li><a href="#tab-7">Notification</a></li>
+            <li><a href="#tab-8">Orders_executor</a></li>
+            <li><a href="#tab-9">Birt</a></li>
+            <li><a href="#tab-10">Elacticsearch</a></li>
+            <li><a href="#tab-11">Geolocation</a></li>
+            <li><a href="#tab-12">Gui_auth</a></li>
+            <li><a href="#tab-13">Gui_backend</a></li>
+            <li><a href="#tab-14">Push</a></li>
+            <li><a href="#tab-15">Reports</a></li>
+            <li><a href="#tab-16">Xvlr_push</a></li>
+        </ul>	
+        
+        <!-- Контент -->
+        <div class="tabs-items" id="content">
+            <div class="tabs-item tabs-flex" id="tab-1">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-2">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-3">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>	
+            <div class="tabs-item tabs-flex" id="tab-4">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-5">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-6">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-7">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-8">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-9">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-10">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-11">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-12">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-13">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-14">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-15">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+            <div class="tabs-item tabs-flex" id="tab-16">
+                <strong>curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" & curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users"</strong>
+            </div>
+        </div>
+    </div>
+</div>
     <script>
-        // Добавить класс к каждому элементу таблицы (td)
-        //var myTableApp = document.getElementsByTagName("TD");
-        //var i;
-        //or (i = 0; i < myTableApp.length; i++) {
-        //  var span = document.createElement("SPAN");
-        //  myTableApp[i].appendChild(span);
-        //}
 
-        // Добавить символ "отмечен" при нажатии на элемент таблицы
-        //var list = document.querySelector('table');
-        //list.addEventListener('click', function(ev) {
-        //  if (ev.target.tagName === 'TD') {
-        //    ev.target.classList.toggle('checkedApp');
-        //  }
-        //  else if (ev.target.tagName === 'TH') {
-        //    ev.target.classList.toggle('checkedHost');
-        //  }
-        //}, false);
+        /* Боковое меню (табы) */
 
-        // Добавляем ползунок для хостов
+        $(function() {
+            var tab = $('#tabs .tabs-items > div'); 
+            tab.hide().filter(':first').show(); 
+            
+            // Клики по вкладкам
+            $('#tabs .tabs-nav a').click(function(){
 
-        $(function () {
-            $('.switch-btn').click(function () {
-                $(this).toggleClass('switch-on');
-                    if ($(this).hasClass('switch-on')) {
-                        $(this).trigger('on.switch');
-                    } else {
-                        $(this).trigger('off.switch');
-                    }
-            });
-            $('.switch-btn').on('on.switch', function () {
-                $($(this).attr('data-id')).removeClass('bl-hide');
-            });
-            $('.switch-btn').on('off.switch', function () {
-                $($(this).attr('data-id')).addClass('bl-hide');
+                tab.hide(); 
+                tab.filter(this.hash).show(); 
+                $('#tabs .tabs-nav a').removeClass('active');
+                $(this).addClass('active');
+                return false;
+
+            }).filter(':first').click();
+         
+            // Клики по якорным ссылкам
+            $('.tabs-target').click(function(){
+
+                $('#tabs .tabs-nav a[href=' + $(this).data('id')+ ']').click();
+
             });
         });
 
-        // Добавляем тумблер
+        /* Скрипт для выделения и копирования*/
 
-        $(window).keyup(function(e){
-	    var target = $('.checkbox-green input:focus');
-	        if (e.keyCode == 9 && $(target).length){
-		        $(target).parent().addClass('focused');
-	        }
+        // Добавляем каждому div выделение текста
+
+        function selectText(elementId) {
+            var doc = document,
+                text = doc.getElementById(elementId), range, selection;
+    
+            if(doc.body.createTextRange) {
+    
+                range = document.body.createTextRange();
+                range.moveToElementText(text);
+                range.select();
+        
+            } else if(window.getSelection) {
+        
+                selection = window.getSelection();
+                range = document.createRange();
+                range.selectNodeContents(text);
+                selection.removeAllRanges();
+                selection.addRange(range);
+
+            }
+        }
+
+        $("#content").click(function() {
+    
+            selectText(this.id);
+
+        // Добавляем автокопирование текста при нажатии на div (выделенный текст)
+           document.execCommand("copy");
+
         });
- 
-        $('.checkbox-green input').focusout(function(){
-	        $(this).parent().removeClass('focused');
+
+        // День/Ночь
+
+        document.querySelector('.themetoggle').addEventListener('click', (event) => {
+            event.preventDefault();
+            if (localStorage.getItem('theme') === 'dark') {
+                localStorage.removeItem('theme');
+            }
+            else {
+                localStorage.setItem('theme', 'dark')
+            }
+            addDarkClassToHTML()
         });
 
-        // Автовысота для текстового поля
+        function addDarkClassToHTML() {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.querySelector('html').classList.add('dark');
+                    document.querySelector('.themetoggle span').textContent = 'dark_mode';
+                }
+                else {
+                    document.querySelector('html').classList.remove('dark');
+                    document.querySelector('.themetoggle span').textContent = 'wb_sunny';
+                }
+            } catch (err) { }
+        }
 
-        $('#textarea').on('input', function(){
-	        this.style.height = '1px';
-	        this.style.height = (this.scrollHeight + 6) + 'px'; 
-        });
-    </script>   
+        addDarkClassToHTML();
 
+    </script>
 </body>
 </html>
