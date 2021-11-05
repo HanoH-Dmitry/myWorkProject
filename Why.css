@@ -1,0 +1,274 @@
+html, body {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #222;
+}
+
+html.dark, .dark body {
+    font-size: 18px;
+    font-family: sans-serif;
+    background: #222;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #f1f1f1;
+    padding: 30px;
+}
+
+.dark .container {
+    background: #3c3c3c;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.dark a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/** Основная навигация **/
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+/** Элементы меню **/
+
+.menu li {
+    width: 150px;
+    list-style: none;
+    background: #00ad1c;
+    position: relative;
+    border-right: 3px solid #fff;
+}
+
+.dark .menu li {
+    width: 150px;
+    list-style: none;
+    background: #19383a;
+    position: relative;
+    border-right: 3px solid #3c3c3c;
+}
+
+/** Стилизируем ссылки **/
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+/* Стиль при наведении на пункты меню */
+
+.menu a:hover {
+    background: #19383a;
+}
+
+.dark .menu a:hover {
+    background: #00ad1c;
+}
+
+/* Стиль для вложенных пунктов меню */
+
+.menu ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0;
+}
+
+/* Появление вложенных элементов при наведении на родительский */
+
+.menu li:hover ul {
+    display: block;
+}
+
+/* Боковое меню */
+
+#tabs {
+	margin: 10px 0;
+	overflow: hidden;
+}
+
+.tabs-nav {
+	width: 150px;
+	float: left;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.tabs-nav:after {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 1px;
+	background: #ccc;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.tabs-nav li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.tabs-nav a {
+	display: block;
+	padding: 10px 20px;
+	width: 100%;
+	box-sizing: border-box;
+	border-top: 1px solid #ccc;  
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+	background: #f1f1f1; 
+	font-size: 16px;
+	text-decoration: none;
+	color: #999;
+}
+
+.dark .tabs-nav a {
+	display: block;
+	padding: 10px 20px;
+	width: 100%;
+	box-sizing: border-box;
+	border-top: 1px solid #fff;  
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+	background: #3c3c3c; 
+	font-size: 16px;
+	text-decoration: none;
+	color: #fbfbfb;
+}
+
+.tabs-nav li:first-child a {
+	border-radius: 5px 0 0 0; 
+}
+
+.tabs-nav li:last-child a {
+	border-bottom: 1px solid #ccc;
+	border-radius: 0 0 0 5px; 
+}
+
+.dart .tabs-nav li:last-child a {
+	border-bottom: 1px solid #fff;
+	border-radius: 0 0 0 5px; 
+}
+
+.tabs-nav a.active {
+	border-right: 1px solid #ccc;
+	background: #fff;
+	color: #000;
+}
+
+.dark .tabs-nav a.active {
+	border-right: 1px solid #fff;
+	background: #222;
+	color: #fff;
+}
+
+.tabs-items {
+	background: #fff;
+}
+
+.dark .tabs-items {
+	background: #222;
+}
+
+.tabs-item {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 0 5px 5px 0;	
+	min-height: auto;
+    width: auto;
+}
+
+.tabs-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-end;
+    width: auto;
+}
+
+.tabs-flex-block {
+    border-radius: 5px;
+    box-sizing: border-box;
+	border-top: 1px solid #ccc;  
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark .tabs-flex-block {
+    border-radius: 5px;
+    box-sizing: border-box;
+	border-top: 1px solid #fff;  
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Переключатель темы */
+
+span.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;  
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Поддержка всех браузеров WebKit */
+    -webkit-font-smoothing: antialiased;
+    /* Поддержка Safari и Chrome */
+    text-rendering: optimizeLegibility;
+  
+    /* Поддержка Firefox */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Поддержка IE */
+    font-feature-settings: 'liga';
+}
+
+/*  Color for NX
+    #19383a - darkGreen
+    #00ad1c - lightGreen
+    #00ad21 - lightGreen2
+    #262626 - Black1
+    #fff
+    #45494a - grey
+    --other color--
+    #005710 - darkGreen2
+    #1f7639 - green
+    #8ec14b - lightGreen3
+*/
