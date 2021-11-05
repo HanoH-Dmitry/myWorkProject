@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CopyPast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <table style="width:auto" id="myTableApp">
+        <tr>
+            <th colspan="3" class="colAppWeb">App</th>
+        <tr>
+            <th>HOSTs</th>
+            <th>GET</th>
+            <th>
+                <label class="checkbox-green">
+                    <input type="checkbox">
+                    <span class="checkbox-green-switch" data-label-on="PGet" data-label-off="PPost"></span>
+                </label>
+            </th>
+        </tr>
+        </tr>
+        <tr>
+            <th rowspan="2"><div class="switch-btn" id="mskIotApp01"></div>msk-iot-app01</th>
+            <td>Activity_sync</td>
+            <td>Activity_sync</td>
+        <tr>
+            <td>Ams_sync</td>
+            <td>Ams_sync</td>
+        </tr>
+        </tr>
+        <tr>
+            <th rowspan="2"><div class="switch-btn" id="mskIotApp01"></div>msk-iot-app02</th>
+            <td id="BackendGet">Backend</td>
+            <td id="BackendPost">Backend</td>
+        </tr>
+        <tr>
+            <td id="LimitMartGet">Limit_mart</td>
+            <td id="LimitMartPost">Limit_mart</td>
+        </tr>
+        <tr>
+            <th rowspan="2"><input type="button" value="msk-iot-app51" class="btn" name="mskIotApp51" OnClick="ClickFunction(this), App51();"></th>
+            <td id="MartSyncGet">Mart_sync</td>
+            <td id="MartSyncPost">Mart_sync</td>
+        </tr>
+        <tr>
+            <td id="NetworkEventsGet">Network_events</td>
+            <td id="NetworkEventsPost">Network_events</td>
+        </tr>
+        <tr>
+            <th rowspan="2"><input type="button" value="msk-iot-app52" class="btn" name="mskIotApp52" OnClick="ClickFunction(this), App52();"></th>
+            <td id="NotificationGet">Notification</td>
+            <td id="NotificationPost">Notification</td>
+        </tr>
+        <tr>
+            <td id="OrdersExecutorGet">Orders_executor</td>
+            <td id="OrdersExecutorPost">Orders_executor</td>
+        </tr>
+        <tr>
+            <th colspan="3" class="colAppWeb">Web</th>
+        </tr>
+        <tr>
+            <th rowspan="2"><input type="button" value="msk-iot-web01" class="btn" name="mskIotWeb01" OnClick="ClickFunction(this), Web01();"></th>
+            <td id="BirtGet">Birt</td>
+            <td id="BirtPost">Birt</td>
+        <tr>
+            <td id="ElasticsearchGet">Elacticsearch</td>
+            <td id="ElasticsearchPost">Elacticsearch</td>
+        </tr>
+        </tr>
+        <tr>
+            <th rowspan="2"><input type="button" value="msk-iot-web02" class="btn" name="mskIotWeb02" OnClick="ClickFunction(this), Web02();"></th>
+            <td id="GeolocationGet">Geolocation</td>
+            <td id="GeolocationPost">Geolocation</td>
+        </tr>
+        <tr>
+            <td id="GuiAuthGet">Gui_auth</td>
+            <td id="GuiAuthPost">Gui_auth</td>
+        </tr>
+        <tr>
+            <th rowspan="2"><input type="button" value="msk-iot-web51" class="btn" name="mskIotWeb51" OnClick="ClickFunction(this), Web51();"></th>
+            <td id="GuiBackendGet">Gui_backend</td>
+            <td id="GuiBackendPost">Gui_backend</td>
+        </tr>
+        <tr>
+            <td id="PushGet">Push</td>
+            <td id="PushPost">Push</td>
+        </tr>
+        <tr>
+            <th rowspan="2"><input type="button" value="msk-iot-web52" class="btn" name="mskIotWeb52" OnClick="ClickFunction(this), Web52();"></th>
+            <td id="ReportsGet">Reports</td>
+            <td id="ReportsPost">Reports</td>
+        </tr>
+        <tr>
+            <td id="XvlrPushGet">Xvlr_push</td>
+            <td id="XvlrPushPost">Xvlr_push</td>
+        </tr>
+    </table>
+    <textarea type="text" value="" id="text textarea" style="width: 320px; height: 300px; background-color: rgba(36, 43, 43); color:chartreuse"></textarea>
+    <div class="out">
+    </div>
+    <!--<script>
+        function myFunction() {
+        var checkBox = document.getElementById("myCheckGet, myCheckPost");
+        //var text = document.getElementById("text");
+        if (checkBox.checked == true){
+            text.style.display = "block";
+        } else {
+           text.style.display = "none";
+        }
+    }
+
+            var list = document.querySelector('input');
+        list.addEventListener('click', function (ev) {
+            if (ev.target.addEventListener === 'mskIotApp01') {
+            ev.target.classList.add('active');
+          }
+        }, false);
+
+                var btns = document.querySelectorAll('button')
+        // Проходим по массиву
+        btns.forEach(function (btn) {
+            // Вешаем событие клик
+            btn.addEventListener('click', function (e) {
+                console.log(e.target.classList);
+            })
+        })
+
+        // Добавляем визуализацию нажатой кнопки ***********
+
+        //element.addEventListener(event, handler[, options]);
+        //event
+        //Имя события, например "click".
+        //    handler
+        //Ссылка на функцию - обработчик.
+        //    options
+        //Для удаления обработчика следует использовать removeEventListener:
+
+        //element.removeEventListener(event, handler[, options]);
+
+        //button.addEventListener('click', function () {
+        //function one() {
+        //  mskIotApp01.classList.add("active");
+        //}
+        //mskIotApp01.addEventListener('click', one, false);
+        //mskIotApp01.removeEventListener('click', one, false);
+
+        //mskIotApp01 .addEventListener("click", myFoo)
+        //function myFoo ()
+        //{
+        //    alert("This click to button Host!");
+        //}
+        //ActivitySyncGet
+
+        //var button = document.getElementById('mskIotApp01');
+        //function foo() {
+        //  mskIotApp01.classList.add("active");
+        //  button.addEventListener('click', foo, true);
+        //}
+        //function foo() {
+        //  mskIotApp01.classList.add("btn");
+        //  button.removeEventListener('click', foo, true);
+        //}
+
+        // Добавляем логику по выбору хостов и компонент
+        //var hostApp = document.getElementById('mskIotApp01, ActivitySyncGet');
+        //var i;
+        //for (i = 0; i < hostApp.length; i++) {
+            //var span = document.createElement("SPAN");
+            //hostApp[i].appendChild(span);
+        //}
+            //if (ev.target.getElementById === 'mskIotApp01') {
+            //    console.log('true')
+            //} else if (ev.target.getElementById === 'ActivitySyncGet') {
+            //    text.value += 'curl -i -H "Accept: application/json" -X GET "https://jsonplaceholder.typicode.com/users" &';
+        //}
+
+        var App01 = document.getElementById('mskIotApp01');
+        App01.addEventListener('click', foo, false);
+
+        function foo() { console.log(target.classList); }
+
+        var ASG = document.getElementById('ActivitySyncGet');
+        ASG.addEventListener('click', foo1, false);
+
+        function foo1() { console.log(target.classList); }
+    </script>-->
+    <script>
+        // Добавить класс к каждому элементу таблицы (td)
+        //var myTableApp = document.getElementsByTagName("TD");
+        //var i;
+        //or (i = 0; i < myTableApp.length; i++) {
+        //  var span = document.createElement("SPAN");
+        //  myTableApp[i].appendChild(span);
+        //}
+
+        // Добавить символ "отмечен" при нажатии на элемент таблицы
+        //var list = document.querySelector('table');
+        //list.addEventListener('click', function(ev) {
+        //  if (ev.target.tagName === 'TD') {
+        //    ev.target.classList.toggle('checkedApp');
+        //  }
+        //  else if (ev.target.tagName === 'TH') {
+        //    ev.target.classList.toggle('checkedHost');
+        //  }
+        //}, false);
+
+        // Добавляем ползунок для хостов
+
+        $(function () {
+            $('.switch-btn').click(function () {
+                $(this).toggleClass('switch-on');
+                    if ($(this).hasClass('switch-on')) {
+                        $(this).trigger('on.switch');
+                    } else {
+                        $(this).trigger('off.switch');
+                    }
+            });
+            $('.switch-btn').on('on.switch', function () {
+                $($(this).attr('data-id')).removeClass('bl-hide');
+            });
+            $('.switch-btn').on('off.switch', function () {
+                $($(this).attr('data-id')).addClass('bl-hide');
+            });
+        });
+
+        // Добавляем тумблер
+
+        $(window).keyup(function(e){
+	    var target = $('.checkbox-green input:focus');
+	        if (e.keyCode == 9 && $(target).length){
+		        $(target).parent().addClass('focused');
+	        }
+        });
+ 
+        $('.checkbox-green input').focusout(function(){
+	        $(this).parent().removeClass('focused');
+        });
+
+        // Автовысота для текстового поля
+
+        $('#textarea').on('input', function(){
+	        this.style.height = '1px';
+	        this.style.height = (this.scrollHeight + 6) + 'px'; 
+        });
+    </script>   
+
+</body>
+</html>
