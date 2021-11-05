@@ -37,8 +37,6 @@ a {
     padding: 0px;
     display: flex;
     justify-content: center;
-    text-transform: uppercase;
-    text-decoration: none;
 }
 
 /** Элементы меню **/
@@ -49,6 +47,9 @@ a {
     background: #00ad1c;
     position: relative;
     border-right: 3px solid #fff;
+    text-decoration: none;
+     text-transform:uppercase;
+    transition: all 0.3s ease;
 }
 
 .dark .menu li {
@@ -57,6 +58,9 @@ a {
     background: #19383a;
     position: relative;
     border-right: 3px solid #3c3c3c;
+    text-decoration: none;
+    text-transform:uppercase;
+    transition: all 0.3s ease;
 }
 
 /** Стилизируем ссылки **/
